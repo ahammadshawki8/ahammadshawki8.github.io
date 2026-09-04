@@ -1,0 +1,119 @@
+/* Work with me: services grid and the message composer. */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5em;
+  margin: 0 0 _size(element-margin) 0;
+
+  @include breakpoint(small) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.service-card {
+  padding: 1.5em;
+  background: _palette(bg);
+  border: solid 1px _palette(border);
+  transition: border-color #{_duration(transition)} ease,
+              box-shadow #{_duration(transition)} ease;
+
+  &:hover {
+    border-color: _palette(border-alt);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.service-title {
+  font-size: 0.7em;
+  margin: 0 0 0.85em 0;
+  line-height: 1.5;
+}
+
+.service-desc {
+  font-size: 0.88em;
+  line-height: 1.7;
+  margin: 0 0 1.1em 0;
+}
+
+.service-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0.35em 0.7em;
+    background: _palette(border-bg);
+    border: solid 1px _palette(border);
+    border-radius: 2px;
+    font-family: _font(family-heading);
+    font-size: 0.6em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: _palette(fg);
+    line-height: 1.4;
+  }
+}
+
+/* Message composer */
+
+.message-form {
+  margin: 0 0 _size(element-margin) 0;
+
+  label {
+    display: block;
+    margin: 0 0 1.1em 0;
+    font-family: _font(family-heading);
+    font-size: 0.62em;
+    font-weight: _font(weight-heading-bold);
+    letter-spacing: _font(kerning-heading);
+    text-transform: uppercase;
+    color: _palette(fg-light);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    margin-top: 0.75em;
+    font-family: _font(family);
+    font-size: 1.55rem;
+    letter-spacing: 0;
+    text-transform: none;
+    color: _palette(fg-bold);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 9em;
+  }
+}
+
+.message-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.25em;
+
+  @include breakpoint(xsmall) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.message-actions {
+  margin-top: 0.5em;
+}
+
+.message-form .button.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.message-note {
+  font-size: 0.82em;
+  line-height: 1.7;
+  color: _palette(fg-light);
+  margin: 1.2em 0 0 0;
+}

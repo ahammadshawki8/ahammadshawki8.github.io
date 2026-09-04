@@ -1,0 +1,125 @@
+/* Publications: article cards linking out to the full post. */
+
+.publication-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75em;
+  margin: 0 0 _size(element-margin) 0;
+
+  @include breakpoint(small) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5em;
+  }
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background: _palette(bg);
+  border: solid 1px _palette(border);
+  overflow: hidden;
+  transition: border-color #{_duration(transition)} ease,
+              box-shadow #{_duration(transition)} ease,
+              transform #{_duration(transition)} ease;
+
+  &:hover {
+    border-color: _palette(border-alt);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+.post-card-media {
+  display: block;
+  overflow: hidden;
+  border-bottom: solid 1px _palette(border);
+  aspect-ratio: 16 / 9;
+  background: _palette(bg-alt);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform #{_duration(transition)} ease-out;
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+}
+
+.post-card-tile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3b4a63, #1f2733);
+}
+
+.post-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.4em 1.5em 1.5em 1.5em;
+}
+
+.post-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+  font-family: _font(family-heading);
+  font-size: 0.6em;
+  letter-spacing: _font(kerning-heading);
+  text-transform: uppercase;
+  color: _palette(fg-light);
+  margin: 0 0 0.9em 0;
+}
+
+.post-card-dot {
+  color: _palette(border-alt);
+}
+
+.post-card-title {
+  font-size: 0.72em;
+  line-height: 1.55;
+  margin: 0 0 0.8em 0;
+
+  a {
+    border-bottom: none;
+
+    &:hover {
+      color: _palette(accent);
+    }
+  }
+}
+
+.post-card-brief {
+  font-size: 0.88em;
+  line-height: 1.7;
+  margin: 0 0 1.2em 0;
+  flex-grow: 1;
+}
+
+.post-card-link {
+  margin-top: auto;
+  align-self: flex-start;
+  font-family: _font(family-heading);
+  font-size: 0.62em;
+  font-weight: _font(weight-heading-bold);
+  letter-spacing: _font(kerning-heading);
+  text-transform: uppercase;
+  border-bottom: solid 1px _palette(border-alt);
+
+  &:hover {
+    color: _palette(accent);
+    border-bottom-color: _palette(accent);
+  }
+}
+
+.publication-footer {
+  font-size: 0.9em;
+  color: _palette(fg-light);
+  border-top: solid 1px _palette(border);
+  padding-top: 1.5em;
+}

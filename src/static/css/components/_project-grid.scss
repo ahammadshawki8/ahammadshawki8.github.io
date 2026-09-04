@@ -1,0 +1,200 @@
+/* Projects: responsive card grid, two per row from the medium breakpoint up. */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75em;
+  margin: 0 0 _size(element-margin) 0;
+
+  @include breakpoint(small) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5em;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: _palette(bg);
+  border: solid 1px _palette(border);
+  overflow: hidden;
+  transition: border-color #{_duration(transition)} ease,
+              box-shadow #{_duration(transition)} ease,
+              transform #{_duration(transition)} ease;
+
+  &:hover {
+    border-color: _palette(border-alt);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+.project-media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-bottom: solid 1px _palette(border);
+  aspect-ratio: 16 / 9;
+  background: _palette(bg-alt);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform #{_duration(transition)} ease-out;
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+}
+
+/* Fallback tile for projects with no poster. */
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+}
+
+.project-tile-initials {
+  font-family: _font(family-heading);
+  font-weight: _font(weight-heading-extrabold);
+  font-size: 2.75em;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.project-tile-name {
+  font-family: _font(family-heading);
+  font-size: 0.65em;
+  font-weight: _font(weight-heading-bold);
+  letter-spacing: _font(kerning-heading);
+  text-transform: uppercase;
+  margin-top: 0.9em;
+  opacity: 0.75;
+}
+
+.project-award-flag {
+  position: absolute;
+  top: 0.85em;
+  left: 0.85em;
+  background: _palette(accent);
+  color: #ffffff;
+  font-family: _font(family-heading);
+  font-size: 0.55em;
+  font-weight: _font(weight-heading-bold);
+  letter-spacing: _font(kerning-heading);
+  text-transform: uppercase;
+  padding: 0.5em 0.9em;
+  border-radius: 2px;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.4em 1.5em 1.5em 1.5em;
+}
+
+.project-header {
+  margin-bottom: 0.75em;
+}
+
+.project-title {
+  font-size: 0.72em;
+  margin: 0 0 0.5em 0;
+  line-height: 1.5;
+
+  a {
+    border-bottom: none;
+
+    &:hover {
+      color: _palette(accent);
+    }
+  }
+}
+
+.project-date {
+  display: block;
+  font-family: _font(family-heading);
+  font-size: 0.62em;
+  font-weight: _font(weight-heading);
+  letter-spacing: _font(kerning-heading);
+  text-transform: uppercase;
+  color: _palette(fg-light);
+}
+
+.project-award {
+  font-family: _font(family-heading);
+  font-size: 0.72em;
+  font-weight: _font(weight-heading-bold);
+  color: _palette(accent);
+  line-height: 1.5;
+  margin: 0 0 0.6em 0;
+}
+
+.project-event {
+  font-size: 0.78em;
+  font-style: italic;
+  color: _palette(fg-light);
+  margin: 0 0 0.8em 0;
+  line-height: 1.5;
+}
+
+.project-desc {
+  font-size: 0.88em;
+  line-height: 1.7;
+  margin: 0 0 1.1em 0;
+  flex-grow: 1;
+}
+
+.project-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  padding: 0;
+  margin: 0 0 1.1em 0;
+
+  li {
+    padding: 0.35em 0.7em;
+    background: _palette(border-bg);
+    border: solid 1px _palette(border);
+    border-radius: 2px;
+    font-family: _font(family-heading);
+    font-size: 0.6em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: _palette(fg);
+    line-height: 1.4;
+  }
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  margin-top: auto;
+
+  a {
+    font-family: _font(family-heading);
+    font-size: 0.62em;
+    font-weight: _font(weight-heading-bold);
+    letter-spacing: _font(kerning-heading);
+    text-transform: uppercase;
+    border-bottom: solid 1px _palette(border-alt);
+
+    &:hover {
+      color: _palette(accent);
+      border-bottom-color: _palette(accent);
+    }
+  }
+}

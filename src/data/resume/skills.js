@@ -1,233 +1,236 @@
+/**
+ * Competency is a 1 to 5 scale.
+ * 5: I reach for this without thinking and have shipped a lot with it.
+ * 4: Comfortable in production, including the parts that are not in the tutorial.
+ * 3: Have built real things with it and know where the edges are.
+ * 2: Working knowledge, would need the documentation open.
+ * 1: Have used it enough to know what it is for.
+ */
 const skills = [
-  {
-    title: 'Javascript',
-    competency: 4,
-    category: ['Web Development', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'Node.JS',
-    competency: 5,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'React',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Next.JS',
-    competency: 3,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Bash',
-    competency: 2,
-    category: ['Tools', 'Languages'],
-  },
-  {
-    title: 'Amazon Web Services',
-    competency: 4,
-    category: ['Web Development', 'Tools'],
-  },
-  {
-    title: 'Heroku',
-    competency: 2,
-    category: ['Web Development', 'Tools'],
-  },
-  {
-    title: 'MongoDB',
-    competency: 3,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'ElasticSearch',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'PostgreSQL/SQLite3/SQL/Redshift',
-    competency: 4,
-    category: ['Web Development', 'Databases', 'Languages'],
-  },
-  {
-    title: 'Redis',
-    competency: 3,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Data Mining',
-    competency: 3,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Express.JS',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'D3',
-    competency: 2,
-    category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Flask',
-    competency: 3,
-    category: ['Web Development', 'Python'],
-  },
-  {
-    title: 'FastAPI',
-    competency: 3,
-    category: ['Web Development', 'Python'],
-  },
-  {
-    title: 'Git/Mercurial',
-    competency: 3,
-    category: ['Tools'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 2,
-    category: ['Tools', 'Data Engineering'],
-  },
-  {
-    title: 'Google Cloud Compute',
-    competency: 2,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'AWS',
-    competency: 3,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'Docker',
-    competency: 3,
-    category: ['Tools', 'Data Engineering'],
-  },
-  {
-    title: 'AWS Lambda',
-    competency: 3,
-    category: ['Tools', 'Web Development'],
-  },
-  {
-    title: 'Numpy',
-    competency: 3,
-    category: ['Data Science', 'Data Engineering', 'Python', 'ML Engineering'],
-  },
-  {
-    title: 'Numba',
-    competency: 2,
-    category: ['Data Science', 'Data Engineering', 'Python'],
-  },
-  {
-    title: 'Tensorflow + Keras',
-    competency: 3,
-    category: ['ML Engineering', 'Python'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 3,
-    category: ['ML Engineering', 'Python'],
-  },
-  {
-    title: 'Jupyter',
-    competency: 3,
-    category: ['Data Science', 'Python'],
-  },
-  {
-    title: 'Typescript',
-    competency: 3,
-    category: ['Web Development', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'HTML + SASS/SCSS/CSS',
-    competency: 3,
-    category: ['Web Development', 'Languages'],
-  },
+  // Languages
   {
     title: 'Python',
     competency: 5,
-    category: ['Languages', 'Python', 'ML Engineering'],
+    category: ['Languages', 'AI & Machine Learning'],
   },
   {
-    title: 'Ruby',
-    competency: 2,
+    title: 'C / C++',
+    competency: 4,
     category: ['Languages'],
   },
   {
-    title: 'Ruby on Rails',
-    competency: 3,
-    category: ['Web Development', 'Languages'],
+    title: 'JavaScript',
+    competency: 4,
+    category: ['Languages', 'Web Development'],
   },
   {
-    title: 'C++',
-    competency: 1,
+    title: 'TypeScript',
+    competency: 4,
+    category: ['Languages', 'Web Development'],
+  },
+  {
+    title: 'Java',
+    competency: 4,
     category: ['Languages'],
   },
   {
-    title: 'Julia',
-    competency: 2,
-    category: ['Languages'],
+    title: 'SQL, PostgreSQL',
+    competency: 4,
+    category: ['Languages', 'Backend & Data'],
   },
   {
-    title: 'MATLAB',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'R',
-    competency: 2,
-    category: ['Languages'],
-  },
-  {
-    title: 'Data Visualization',
-    competency: 3,
-    category: ['Data Science', 'Javascript'],
-  },
-  {
-    title: 'GraphQL',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Pandas',
+    title: 'HTML, CSS, SASS',
     competency: 5,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
+    category: ['Languages', 'Web Development'],
   },
   {
-    title: 'Matplotlib',
+    title: 'Dart',
     competency: 3,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
+    category: ['Languages'],
+  },
+
+  // Web development
+  {
+    title: 'React',
+    competency: 5,
+    category: ['Web Development'],
   },
   {
-    title: 'Scikit-Learn',
+    title: 'Next.js',
     competency: 4,
-    category: ['Data Engineering', 'ML Engineering', 'Python'],
+    category: ['Web Development'],
   },
   {
-    title: 'Spark',
-    competency: 2,
-    category: ['Data Engineering', 'ML Engineering'],
+    title: 'Django, Django REST Framework',
+    competency: 5,
+    category: ['Web Development', 'Backend & Data'],
   },
   {
-    title: 'Dagster',
-    competency: 2,
-    category: ['Data Engineering', 'Python', 'ML Engineering'],
+    title: 'FastAPI',
+    competency: 4,
+    category: ['Web Development', 'Backend & Data'],
   },
   {
-    title: 'Mypy',
+    title: 'Flask',
+    competency: 4,
+    category: ['Web Development', 'Backend & Data'],
+  },
+  {
+    title: 'Node.js, Express',
     competency: 3,
-    category: ['Python'],
+    category: ['Web Development', 'Backend & Data'],
   },
   {
-    title: 'Pylint',
+    title: 'Tailwind CSS, Bootstrap',
     competency: 4,
-    category: ['Data Engineering', 'Python'],
+    category: ['Web Development'],
   },
+  {
+    title: 'Flutter',
+    competency: 3,
+    category: ['Web Development'],
+  },
+  {
+    title: 'JavaFX',
+    competency: 4,
+    category: ['Web Development'],
+  },
+
+  // AI and machine learning
+  {
+    title: 'PyTorch',
+    competency: 4,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'scikit-learn',
+    competency: 4,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'LLM Application Engineering',
+    competency: 5,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'Agentic Systems, Tool Use',
+    competency: 5,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'Model Context Protocol (MCP)',
+    competency: 5,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'Retrieval Augmented Generation',
+    competency: 4,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'Model Evaluation & Grounding',
+    competency: 4,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'NumPy, Pandas, Matplotlib',
+    competency: 5,
+    category: ['AI & Machine Learning', 'Backend & Data'],
+  },
+  {
+    title: 'OpenCV, Signal Processing',
+    competency: 3,
+    category: ['AI & Machine Learning'],
+  },
+
+  // Backend, data and infrastructure
+  {
+    title: 'REST API Design',
+    competency: 5,
+    category: ['Backend & Data'],
+  },
+  {
+    title: 'Database Design & Modelling',
+    competency: 4,
+    category: ['Backend & Data'],
+  },
+  {
+    title: 'MongoDB, Redis',
+    competency: 3,
+    category: ['Backend & Data'],
+  },
+  {
+    title: 'Docker',
+    competency: 4,
+    category: ['Infrastructure'],
+  },
+  {
+    title: 'Google Cloud (Run, Pub/Sub, Firestore, Vertex AI)',
+    competency: 4,
+    category: ['Infrastructure'],
+  },
+  {
+    title: 'AWS (Bedrock, ECS Fargate, Lambda)',
+    competency: 3,
+    category: ['Infrastructure'],
+  },
+  {
+    title: 'CI/CD, GitHub Actions',
+    competency: 4,
+    category: ['Infrastructure'],
+  },
+  {
+    title: 'Prometheus, Grafana, Observability',
+    competency: 3,
+    category: ['Infrastructure'],
+  },
+  {
+    title: 'Microservice Architecture',
+    competency: 4,
+    category: ['Infrastructure'],
+  },
+  {
+    title: 'Git, Linux, Shell',
+    competency: 4,
+    category: ['Infrastructure'],
+  },
+
+  // Engineering practice
+  {
+    title: 'Data Structures & Algorithms',
+    competency: 4,
+    category: ['Practice'],
+  },
+  {
+    title: 'Object Oriented Design',
+    competency: 5,
+    category: ['Practice'],
+  },
+  {
+    title: 'Automated Testing',
+    competency: 4,
+    category: ['Practice'],
+  },
+  {
+    title: 'Technical Writing & Documentation',
+    competency: 5,
+    category: ['Practice'],
+  },
+  {
+    title: 'UI/UX Design, Figma',
+    competency: 4,
+    category: ['Practice', 'Web Development'],
+  },
+  {
+    title: 'Technical Leadership & Mentoring',
+    competency: 4,
+    category: ['Practice'],
+  },
+
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
-// this is a list of colors that I like. The length should be === to the
-// number of categories. Re-arrange this list until you find a pattern you like.
+// A list of colours I like. The length should match the number of categories.
+// Re-arrange until you find a pattern you like.
 const colors = [
   '#6968b3',
   '#37b1f5',

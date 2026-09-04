@@ -10,7 +10,7 @@ import { act } from 'react-dom/test-utils';
 import App from '../App';
 
 describe('renders the app', () => {
-  // mocks the fetch API used on the stats page and the about page.
+  // mocks the fetch API used on the about page.
   const jsonMock = jest.fn(() => Promise.resolve({}));
   const textMock = jest.fn(() => Promise.resolve(''));
   global.fetch = jest.fn(() => Promise.resolve({
@@ -41,7 +41,7 @@ describe('renders the app', () => {
   });
 
   it('should render the title', async () => {
-    expect(document.title).toBe("Michael D'Angelo");
+    expect(document.title).toBe('Ahammad Shawki');
   });
 
   it('can navigate to /about', async () => {
@@ -81,17 +81,15 @@ describe('renders the app', () => {
     expect(window.location.pathname).toBe('/projects');
   });
 
-  it('can navigate to /stats', async () => {
-    expect.assertions(5);
-    const contactLink = document.querySelector('#header > nav > ul > li:nth-child(4) > a');
-    expect(contactLink).toBeInTheDocument();
+  it('can navigate to /publications', async () => {
+    expect.assertions(3);
+    const publicationsLink = document.querySelector('#header > nav > ul > li:nth-child(4) > a');
+    expect(publicationsLink).toBeInTheDocument();
     await act(async () => {
-      await contactLink.click();
+      await publicationsLink.click();
     });
-    expect(document.title).toContain('Stats |');
-    expect(window.location.pathname).toBe('/stats');
-    expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(jsonMock).toHaveBeenCalledTimes(1);
+    expect(document.title).toContain('Publications |');
+    expect(window.location.pathname).toBe('/publications');
   });
 
   it('can navigate to /contact', async () => {
@@ -101,7 +99,7 @@ describe('renders the app', () => {
     await act(async () => {
       await contactLink.click();
     });
-    expect(document.title).toContain('Contact |');
+    expect(document.title).toContain('Hire Me |');
     expect(window.location.pathname).toBe('/contact');
   });
 });

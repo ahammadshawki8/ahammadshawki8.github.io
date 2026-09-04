@@ -8,13 +8,20 @@ const About = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
+    let active = true;
+
     import('../data/about.md')
-      .then((res) => {
-        fetch(res.default)
-          .then((r) => r.text())
-          .then(setMarkdown);
+      .then((res) => fetch(res.default))
+      .then((r) => r.text())
+      .then((text) => {
+        if (active) setMarkdown(text);
+      })
+      .catch(() => {
+        if (active) setMarkdown('# About\n\nThis page failed to load. Please try again.');
       });
-  });
+
+    return () => { active = false; };
+  }, []);
 
   const count = markdown.split(/\s+/)
     .map((s) => s.replace(/\W/g, ''))
@@ -23,7 +30,7 @@ const About = () => {
   return (
     <Main
       title="About"
-      description="Learn about Michael D'Angelo"
+      description="About Ahammad Shawki: how I got here, what I am working on, and what I care about."
     >
       <article className="post markdown" id="about">
         <header>
