@@ -13,6 +13,16 @@ module.exports = {
   ],
   parser: '@babel/eslint-parser',
   plugins: ['react'],
+  overrides: [
+    {
+      // Build-time scripts are not shipped to the browser, so they may use
+      // devDependencies.
+      files: ['scripts/**/*.js'],
+      rules: {
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      },
+    },
+  ],
   rules: {
     'jsx-a11y/anchor-is-valid': ['error', {
       aspects: ['noHref', 'invalidHref', 'preferButton'],

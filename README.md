@@ -12,7 +12,7 @@ Built on [mldangelo/personal-site](https://github.com/mldangelo/personal-site), 
 | --- | --- |
 | `/` | Introduction, awards and honours, recommendations |
 | `/about` | Long-form background, rendered from `src/data/about.md` |
-| `/resume` | Education, experience, awards, skills and coursework |
+| `/resume` | Summary, experience, awards, skills, education, coursework, and the PDF download |
 | `/projects` | Selected projects as a two-column grid |
 | `/publications` | Technical articles, linking out to the full posts |
 | `/contact` | Services offered, and a composer that opens a pre-filled email |
@@ -30,7 +30,24 @@ Almost everything lives in `src/data`, so a content change rarely needs a compon
 | `data/about.md` | The about page |
 | `data/routes.js` | Navigation |
 | `data/contact.js` | Social links |
-| `data/resume/*.js` | Education, experience, awards, skills, courses |
+| `data/resume/*.js` | Summary, education, experience, awards, skills, courses |
+
+### The PDF resume
+
+`resume/resume.html` is the source for `public/Ahammad_Shawki_Resume.pdf`. Edit the HTML, then:
+
+```bash
+npm run build:resume
+```
+
+The build fails if the result runs past one page, if a section heading goes missing, or if the
+text layer does not extract, so a broken resume cannot ship quietly.
+
+It is written to the conventions applicant tracking systems parse reliably: one column, no
+tables or text boxes for layout, no images, nothing in the page margins, standard section
+headings, and ligatures disabled. That last one matters more than it sounds. Calibri ligates
+`fi`, `fl` and `ft`, and without `font-variant-ligatures: none` a parser reads "Software" as
+"So ware", so the keyword a recruiter searches for is simply not in the document.
 
 ### Publications
 

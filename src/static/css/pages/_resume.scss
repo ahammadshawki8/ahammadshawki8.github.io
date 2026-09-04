@@ -18,17 +18,42 @@
 		}
 	}
 
-	.education {
+	/* One heading treatment for every section, left aligned over a rule, so the
+	   page scans the way the PDF does. The template centred some and not
+	   others, which read as inconsistent once Summary and Awards were added. */
+	.resume-summary,
+	.experience,
+	.awards,
+	.skills,
+	.education,
+	.courses {
+		margin-bottom: 2.5em;
 
-		.title {
-			text-align: center;
-			margin-bottom: 2em;
+		> .title {
+			text-align: left;
+			margin: 0 0 1.25em 0;
+			padding-bottom: 0.5em;
+			border-bottom: solid 2px _palette(fg-bold);
+
+			h3 {
+				margin: 0;
+				font-size: 0.9em;
+				letter-spacing: _font(kerning-heading);
+				text-transform: uppercase;
+			}
+
+			p {
+				margin: 0.9em 0 0 0;
+				text-transform: none;
+				letter-spacing: 0;
+				font-family: _font(family);
+				font-size: 0.85em;
+				line-height: 1.7;
+			}
 		}
 	}
+
 	.experience {
-		.title {
-			text-align: center;
-		}
 		.job {
 			margin: 1em;
 			p{
@@ -49,9 +74,6 @@
 
 	.courses {
 		padding-top: 1.6em;
-		.title {
-			text-align: center;
-		}
 		.course-list {
 			text-align: center;
 
@@ -63,24 +85,11 @@
 
 	.skills {
 		margin-top: 2em;
-		.title {
-			text-align: center;
-			p {
-				font-size: 0.9em;
-			}
-		}
 	}
 
 	.summary {
 		margin-bottom: 0.5em;
 		font-size: 0.9em;
-	}
-
-	.references {
-		margin: 2em 0;
-		.title {
-			text-align: center;
-		}
 	}
 }
 

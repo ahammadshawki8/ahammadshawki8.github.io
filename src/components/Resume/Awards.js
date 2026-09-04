@@ -8,22 +8,29 @@ const Awards = ({ data }) => (
     <div className="title">
       <h3>Awards</h3>
     </div>
-    {data.map((award) => (
-      <article className="award-container" key={`${award.title}-${award.org}`}>
-        <header>
-          <h4 className="award-heading">
-            {award.link ? (
-              <a href={award.link} target="_blank" rel="noopener noreferrer">{award.title}</a>
-            ) : award.title}
-          </h4>
-          <p className="award-meta">
-            {award.org}, {dayjs(award.date).format('YYYY')}
-            {award.project && ` for ${award.project}`}
-          </p>
-        </header>
-        <p className="award-summary">{award.summary}</p>
-      </article>
-    ))}
+    {data.map((award) => {
+      const year = dayjs(award.date).format('YYYY');
+      // Some competitions carry their own year in the name, so appending it
+      // again would read "FLIR App Challenge 2025 to 2026, 2026".
+      const meta = award.org.includes(year) ? award.org : `${award.org}, ${year}`;
+
+      return (
+        <article className="award-container" key={`${award.title}-${award.org}`}>
+          <header>
+            <h4 className="award-heading">
+              {award.link ? (
+                <a href={award.link} target="_blank" rel="noopener noreferrer">{award.title}</a>
+              ) : award.title}
+            </h4>
+            <p className="award-meta">
+              {meta}
+              {award.project && ` for ${award.project}`}
+            </p>
+          </header>
+          <p className="award-summary">{award.summary}</p>
+        </article>
+      );
+    })}
   </div>
 );
 
