@@ -18,8 +18,8 @@ const Projects = () => (
         <div className="title">
           <h2><Link to="/projects">Projects</Link></h2>
           <p>
-            {data.length} selected projects, newest first. {awarded} of them won their competition.
-            Most were built to a deadline, and every one of them shipped.
+            {data.length} selected pieces of work, newest first. Products, agent systems and
+            machine learning competitions. {awarded} of them won.
           </p>
         </div>
       </header>

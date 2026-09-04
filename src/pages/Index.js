@@ -28,17 +28,22 @@ const Index = () => (
         </div>
       </header>
       <p>
-        Most of my work sits where an AI system meets a requirement to be correct: an options agent
-        that prices its own exit before it enters a trade, an agent fleet that repairs a spreadsheet
-        and proves it by recalculating the file, a forensics layer that will not let a model assert
-        anything it cannot ground in evidence. The principle underneath all of it is the same. Give
-        the model the smallest job that only it can do, and make everything around it deterministic
-        and reproducible.
+        The work splits about evenly. Half of it is models measured against somebody else&apos;s
+        held-out test set: Bangla speech recognition on hours of overlapping conversation for DL
+        Sprint at BUET CSE Fest, and a Bengali hallucination detector that had to decide whether a
+        fluent answer was actually true, which reached third on the leaderboard at 0.922 F1.
       </p>
       <p>
-        Read more <Link to="/about">about me</Link>, look through my{' '}
-        <Link to="/resume">resume</Link> or <Link to="/projects">projects</Link>, browse my{' '}
-        <Link to="/publications">writing</Link>, or <Link to="/contact">get in touch</Link>.
+        The other half is products, usually built to a deadline and usually with a team. A screening
+        tool for Parkinson&apos;s that explains every score it gives. A thermal inspection app that
+        binds each reading to the panel it came from. A platform that pays people to clean up waste
+        only once the cleanup is verified.
+      </p>
+      <p>
+        Both halves want the same thing from me, which is why I keep doing both. Read more{' '}
+        <Link to="/about">about me</Link>, look through my <Link to="/resume">resume</Link> or{' '}
+        <Link to="/projects">projects</Link>, browse my <Link to="/publications">writing</Link>,
+        or <Link to="/contact">get in touch</Link>.
       </p>
     </article>
 
@@ -47,7 +52,8 @@ const Index = () => (
         <div className="title">
           <h2>Awards and Honors</h2>
           <p>
-            32 hackathons entered, 4 of them won. Selected recognition, most recent first.
+            Thermal imaging, clinical speech, medical documents, loan covenants. The wins have
+            almost nothing in common, which is the part I am proudest of.
           </p>
         </div>
       </header>

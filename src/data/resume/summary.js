@@ -10,10 +10,11 @@ const summary = {
     + 'Django and FastAPI behind them, and PyTorch, MCP and agent tooling where the problem calls '
     + 'for it.',
 
-    'Four competition wins from 32 hackathons, including the Grand Prize at the FLIR App Challenge '
-    + 'and first place overall at the ML Empowerment Build Challenge. I founded and lead SrotDev, '
-    + 'and previously led a 30-person engineering team as President of Web and App Development at '
-    + 'NDITC. Available for internships, contract work and collaboration.',
+    'I founded and lead SrotDev, and before that led a 30-person engineering team as President of '
+    + 'Web and App Development at NDITC. Strongest recent results: a Grand Prize at the FLIR App '
+    + 'Challenge, best overall project at the ML Empowerment Build Challenge, and third on the '
+    + 'leaderboard at the IUT Bengali hallucination datathon. Available for internships, contract '
+    + 'work and collaboration.',
   ],
 
   // Kept deliberately short. Each one is checkable.

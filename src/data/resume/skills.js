@@ -138,6 +138,16 @@ const skills = [
     category: ['AI & Machine Learning', 'Backend & Data'],
   },
   {
+    title: 'Speech Recognition, Whisper',
+    competency: 3,
+    category: ['AI & Machine Learning'],
+  },
+  {
+    title: 'Bengali NLP',
+    competency: 4,
+    category: ['AI & Machine Learning'],
+  },
+  {
     title: 'OpenCV, Signal Processing',
     competency: 3,
     category: ['AI & Machine Learning'],

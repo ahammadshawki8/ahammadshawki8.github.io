@@ -89,6 +89,23 @@ const data = [
       + 'that inflates most published voice screening work. Ships as an installable multilingual PWA.',
   },
   {
+    title: 'Olikobochon',
+    image: '/images/projects/olikobochon.jpg',
+    link: 'https://www.kaggle.com/competitions/bengali-hallucination',
+    repo: 'https://github.com/ahammadshawki8/Shawki_Codes_IUTDL',
+    date: '2026-07-19',
+    event: 'IUTCS Datathon 2.0, Institute of Policy Dynamics',
+    tags: ['Bengali NLP', 'Hallucination Detection', 'Qwen3', 'Gemma 3', 'RAG', 'Kaggle'],
+    desc:
+      'A model can name the author of Bidrohi correctly in English and hand the poem to the wrong '
+      + 'poet in Bengali, in prose that sounds completely fluent. This competition asks you to catch '
+      + 'that. Given a Bengali prompt and a candidate answer, decide whether the answer is faithful '
+      + 'or invented. My pipeline is a decision ladder: match against the public corpora the '
+      + 'benchmark was built from, then fuzzy-match an 89k-question bank, then idiom lexicons, and '
+      + 'only send the irreducible residue to an open-weight judge with Bengali Wikipedia retrieval '
+      + 'behind it. Scored 0.922 F1 on the hallucinated class, third on the public leaderboard.',
+  },
+  {
     title: 'DeepSIFT',
     image: '/images/projects/deepsift.jpg',
     link: 'https://github.com/ahammadshawki8/DeepSIFT',
@@ -145,6 +162,21 @@ const data = [
       + 'physical asset, syncing to a Flask backend that turns captures into fault reports and '
       + 'maintenance history. Removing the manual reconciliation step is what makes large-array '
       + 'inspection viable, and it recovers yield without any additional hardware on site.',
+  },
+  {
+    title: 'DL Sprint 4.0',
+    image: '/images/projects/dlsprint.jpg',
+    link: 'https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition',
+    date: '2026-02-21',
+    event: 'DL Sprint 4.0, BUET CSE Fest 2026',
+    tags: ['Speech Recognition', 'Whisper', 'PyTorch', 'Audio Processing', 'Kaggle'],
+    desc:
+      'Bangla speech recognition on long-form audio: lectures, interviews and real conversations '
+      + 'rather than clean single-speaker clips. The difficulty is everything around the speech. '
+      + 'Recordings run for hours, speakers overlap, music bleeds in, and silence stretches long '
+      + 'enough that a decoder will happily hallucinate through it. Scored on word error rate '
+      + 'weighted by sentence length, so a long sentence transcribed badly costs what it should. '
+      + 'Three weeks of training runs against a hidden test set.',
   },
   {
     title: 'Resonate',
