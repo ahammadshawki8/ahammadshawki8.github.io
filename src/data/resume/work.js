@@ -18,7 +18,7 @@ const work = [
     url: 'https://github.com/SrotDev',
     startDate: '2025-05-01',
     highlights: [
-      'Founded SrotDev with classmates as a flat engineering collective, so that work we build together is published under one name instead of scattered across individual accounts.',
+      'Founded SrotDev as a flat engineering collective, so that work the team builds together is published under one name instead of scattered across individual accounts.',
       'Ship production web and mobile applications across React, Next.js, Django, FastAPI, Flutter and PostgreSQL.',
       'Designed and built Srabon, an inclusive gamified science learning platform for secondary schoolers with multilingual and accessibility support.',
       'Architected CareForAll as seven independently deployable Django services behind an API gateway, with its own Prometheus and Grafana observability stack.',

@@ -27,7 +27,8 @@ const SideBar = () => {
           Hey there, I am Ahammad. I am a Computer Science and Engineering undergraduate at{' '}
           <a href="https://cse.buet.ac.bd/">BUET</a>, and I build AI-native software: agentic
           systems, machine learning tools and the full-stack products around them. I run{' '}
-          <a href="https://github.com/SrotDev">SrotDev</a> with my classmates. Previously founder of{' '}
+          <a href="https://github.com/SrotDev">SrotDev</a>, an engineering collective I founded.
+          Previously founder of{' '}
           <a href="https://the-as8-organization.github.io/">The AS8 Organization</a> and President
           of Web and App Development at <a href="https://nditc.net/">NDITC</a>.
         </p>
