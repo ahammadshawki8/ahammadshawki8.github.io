@@ -15,6 +15,8 @@
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
     "build:resume": "node scripts/build-resume.js",
+    "check:resume": "node scripts/check-resume.js",
+    "tailor": "node scripts/tailor-resume.js",
     "fetch:publications": "node scripts/fetch-publications.js",
     "lint": "eslint \"**/*.js\"",
     "predeploy": "npm run build && react-snap",

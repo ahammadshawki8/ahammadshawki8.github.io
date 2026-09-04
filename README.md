@@ -34,14 +34,22 @@ Almost everything lives in `src/data`, so a content change rarely needs a compon
 
 ### The PDF resume
 
-`resume/resume.html` is the source for `public/Ahammad_Shawki_Resume.pdf`. Edit the HTML, then:
+The resume is data plus a renderer, not a document.
+
+| File | What it is |
+| --- | --- |
+| `resume/content.js` | Every resume item, each tagged. The single source of truth. |
+| `resume/render.js` | Ranks items by tag overlap and renders the HTML. |
+| `resume/profiles/*.json` | One per role: which tags matter, what to pin or drop. |
 
 ```bash
-npm run build:resume
+npm run build:resume     # default profile -> public/Ahammad_Shawki_Resume.pdf
+npm run check:resume     # verify one page, keywords present, text layer intact
 ```
 
-The build fails if the result runs past one page, if a section heading goes missing, or if the
-text layer does not extract, so a broken resume cannot ship quietly.
+The builder shrinks the content budget step by step until the document genuinely fits one page,
+measured under print media, so it cannot silently become two. `check:resume` then confirms every
+word survives PDF text extraction.
 
 It is written to the conventions applicant tracking systems parse reliably: one column, no
 tables or text boxes for layout, no images, nothing in the page margins, standard section

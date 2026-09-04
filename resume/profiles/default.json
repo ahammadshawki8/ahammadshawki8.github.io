@@ -1,0 +1,10 @@
+{
+  "slug": "default",
+  "role": "",
+  "company": "",
+  "note": "The general resume published on the site. Balanced: no tag is boosted, so everything keeps its authored order.",
+  "emphasis": [],
+  "deprioritise": [],
+  "pin": [],
+  "drop": ["zero", "doclyst"]
+}
