@@ -11,14 +11,22 @@
     margin: 0;
   }
 
+  // The base .button rule sets its colour with !important, and its :hover
+  // switches the label to the accent, which on a filled accent background is
+  // blue on blue. Both need overriding here or the text fails contrast.
   .button.primary {
     background-color: _palette(accent);
-    color: #ffffff;
-    border-color: _palette(accent);
+    box-shadow: inset 0 0 0 1px _palette(accent);
+    color: #ffffff !important;
 
     &:hover {
-      background-color: darken(#2e59ba, 7%);
-      border-color: darken(#2e59ba, 7%);
+      background-color: darken(_palette(accent), 9%);
+      box-shadow: inset 0 0 0 1px darken(_palette(accent), 9%);
+      color: #ffffff !important;
+    }
+
+    &:active {
+      background-color: darken(_palette(accent), 16%);
     }
   }
 }
