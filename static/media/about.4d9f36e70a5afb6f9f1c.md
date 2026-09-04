@@ -20,9 +20,9 @@ The through line is a conviction I keep arriving at from different directions: g
 smallest job that only it can do, and make everything around it deterministic, measurable and
 reproducible. I am far more interested in the honest version of a result than the impressive one.
 
-Alongside that I run [SrotDev](https://github.com/SrotDev) with my classmates, a flat engineering
-collective we started so the things we build together get published in one place instead of
-scattered across our individual accounts.
+Alongside that I run [SrotDev](https://github.com/SrotDev), a flat engineering collective I
+founded so the things we build together get published in one place instead of scattered across
+individual accounts.
 
 # Some history
 
@@ -52,8 +52,8 @@ scattered across our individual accounts.
 - At sixteen I started writing technical articles, hoping to give something back. Two of them were
   published on freeCodeCamp News. Writing has done more for my thinking than almost anything else.
 
-- Later in 2020 I ran PyCampaign20, an online beginners' programming bootcamp for my classmates
-  during lockdown. It was my first time teaching, and it stuck.
+- Later in 2020 I ran PyCampaign20, an online beginners' programming bootcamp during lockdown.
+  It was my first time teaching, and it stuck.
 
 - In 2021 I realised that developer communities in Bangladesh mostly served university students. I
   co-founded The AS8 Organization to build something open to everyone else, and we reached more
