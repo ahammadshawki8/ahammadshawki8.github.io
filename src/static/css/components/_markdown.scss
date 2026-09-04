@@ -2,12 +2,30 @@
 
 .markdown {
 
+  // `margin: auto` computes to zero top and bottom, so paragraphs ran together.
+  // It went unnoticed while this page was mostly bullet lists.
   p {
-    margin: auto;
+    margin: 0 0 1.2em 0;
+    line-height: 1.85;
+  }
+
+  ul {
+    margin: 0 0 1.2em 0;
+  }
+
+  li {
+    margin-bottom: 0.35em;
+    line-height: 1.75;
   }
 
   h1 {
     font-size: .8em;
     margin-top: 3em;
+    margin-bottom: 1.2em;
+  }
+
+  // Dated entries under "Some history" lead with a bold label.
+  p > strong:first-child {
+    color: _palette(fg-bold);
   }
 }

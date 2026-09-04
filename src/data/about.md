@@ -1,80 +1,75 @@
 # Intro
 
-From the moment I printed "Hello World" to the console of my first program, I knew I was hooked
-on programming. It has never been a side hustle for me. It offered me a problem I could not put
-down, and a way to keep getting better at building things that other people can actually use.
-What started with one print statement has become the thing I organise my life around, and it has
-only got more interesting as the years have gone by.
+I printed my first Hello World at twelve. I have not really stopped since.
+
+That is most of the story. Programming was never the serious thing I kept beside a hobby, or the
+hobby I kept beside something serious. It was just the thing I kept choosing. What surprises me is
+that it got more interesting the more I understood it. Most things go the other way.
 
 # Currently
 
-I am a Computer Science and Engineering undergraduate at BUET, and I build AI-native software.
+I am doing Computer Science and Engineering at BUET, and almost everything I build now has a
+language model somewhere in it.
 
-Most of my work now sits at the point where a language model meets a system that has to be
-correct. That has meant an options agent that prices its own exit before it enters a trade, an
-agent fleet that repairs spreadsheets and proves the repair by recalculating the file, a forensics
-layer that refuses to let a model assert anything it cannot ground in evidence, and a screening
-model validated across three separate language corpora instead of one convenient split.
+The model is never the interesting part. Everything around it is. An options agent I wrote this
+year prices what it will cost to close a trade before it opens one, because in short-dated options
+that cost *is* the trade and almost nobody measures it. A forensics tool I built parses every piece
+of evidence into structured data before the model is allowed near it, so it cannot invent a finding
+and call it a fact. Same instinct both times: give the model the one small job only it can do, and
+make everything else boring and checkable.
 
-The through line is a conviction I keep arriving at from different directions: give the model the
-smallest job that only it can do, and make everything around it deterministic, measurable and
-reproducible. I am far more interested in the honest version of a result than the impressive one.
-
-Alongside that I run [SrotDev](https://github.com/SrotDev), a flat engineering collective I
-founded so the things we build together get published in one place instead of scattered across
-individual accounts.
+I also run [SrotDev](https://github.com/SrotDev), an engineering collective I founded. Most of what
+we have shipped in the last year came out of a hackathon.
 
 # Some history
 
-- In 2011, my parents bought our first family laptop, an old HP running Windows 7. Within months I
-  had worn out the spacebar playing *GTA Vice City*, *Road Rash* and *House of the Dead*.
+**2011.** My parents bought a family laptop, an old HP running Windows 7. I wore the spacebar out
+inside a year on *GTA Vice City*, *Road Rash* and *House of the Dead*.
 
-- Around age eight, I asked my mother what my software engineer uncle actually did. She said, *"He
-  makes the games you play."* That was the moment I decided I wanted to create, not just consume.
+**Around eight.** I asked my mother what my uncle actually did for a living. She said he makes the
+games you play. I remember deciding, right then, that I wanted to be on that side of it.
 
-- In 2015, I moved to Dhaka and got into Rajuk Uttara Model College, one of the best institutions
-  in the country. A lot of who I am was shaped there.
+**2015.** Moved to Dhaka and got into Rajuk Uttara Model College. A lot of who I am now was
+settled there.
 
-- In 2016, I received my first novel, *1971* by Humayun Ahmed, as a prize for academic excellence.
-  I read it in a single sitting. I did not sleep that night, and I have been in love with
-  storytelling ever since.
+**2016.** Won a novel as a prize for academic results, *1971* by Humayun Ahmed. I read it in one
+sitting and did not sleep afterwards. That is where the reading habit started, and most of the 600
+books came later.
 
-- At twelve, I joined the Rajuk College Robotics and Technology Club. I did not understand most of
-  what was going on, but it was the thing that made me curious enough to find out.
+**Twelve.** Joined the school robotics and technology club, where I understood almost nothing that
+was happening. That turned out to be the useful part.
 
-- Between twelve and fourteen, I taught myself Python, C and C++ from tutorials, books and
-  documentation, and I have not stopped since.
+**Twelve to fourteen.** Taught myself Python, then C, then C++, out of tutorials and documentation
+and a great deal of guessing.
 
-- 2020 was the year everything changed. The pandemic brought isolation and, with it, time. I
-  learned web development, and joined freeCodeCamp, EddieHub and MLH. Those communities mentored
-  me and showed me what collaboration actually looks like.
+**2020.** The pandemic left me with nothing to do, so I learned web development with it. I also
+found freeCodeCamp, EddieHub and MLH, which is where I learned that strangers will help you for
+free if you actually ask.
 
-- At sixteen I started writing technical articles, hoping to give something back. Two of them were
-  published on freeCodeCamp News. Writing has done more for my thinking than almost anything else.
+**Sixteen.** Started writing technical articles to pay some of that back. freeCodeCamp News
+published two of them. Writing has done more for how I think than any course I have taken.
 
-- Later in 2020 I ran PyCampaign20, an online beginners' programming bootcamp during lockdown.
-  It was my first time teaching, and it stuck.
+**Late 2020.** Ran PyCampaign20, a beginners' programming bootcamp over lockdown. It was the first
+time I taught anything. It stuck.
 
-- In 2021 I realised that developer communities in Bangladesh mostly served university students. I
-  co-founded The AS8 Organization to build something open to everyone else, and we reached more
-  than 20,000 learners.
+**2021.** Developer communities here mostly served university students, so I co-founded The AS8
+Organization for everyone they were skipping. It reached about 20,000 people.
 
-- In 2022 I got into Notre Dame College and joined NDITC with the explicit goal of leading it.
-  I became President of Web and App Development, ran the national fests *INIT 3.0* and *4.0*, and
-  taught web development to over 500 students directly.
+**2022.** Got into Notre Dame College and joined NDITC intending to run it. Eventually I did, as
+President of Web and App Development. Two national fests, *INIT 3.0* and *4.0*, and around 500
+students taught face to face.
 
-- In 2023 I received the Honorable Mention Award, the prize Notre Dame College gives to students
-  who hold up academically and in club leadership at the same time.
+**2023.** Received the Honorable Mention Award, which Notre Dame gives to students who hold up
+academically and in club leadership at the same time.
 
-- In 2024 I sat the university entrance exams and was admitted to BUET for Computer Science and
-  Engineering.
+**2024.** Sat the university entrance exams and got into BUET for Computer Science and Engineering.
 
-- Since 2025 I have been building in public, mostly through hackathons: 32 of them so far, four of
-  which we won, including the Grand Prize at the FLIR App Challenge. Hackathons turned out to be
-  the fastest way I know to work on an unfamiliar problem with a real deadline and no room to hide
-  behind a plan.
+**2025 onward.** Mostly hackathons. Thirty-two of them, four won, including a Grand Prize. What a
+list of awards does not show is that the first win came after a long streak of not winning
+anything. I have found no faster way to work on a problem I do not understand yet, with a real
+deadline and nowhere to hide behind a plan.
 
-I have more stories, the kind I would rather tell over coffee than put on the internet.
+I have more stories. They are better over coffee than on the internet.
 
 # I like
 
@@ -93,23 +88,23 @@ I have more stories, the kind I would rather tell over coffee than put on the in
 - Open source
 - Startup culture
 
-If any of that overlaps with you, do not hesitate to start a conversation. I enjoy talking to
-people who see things the way I do, and I enjoy talking to the ones who do not even more.
+If any of that overlaps with you, start a conversation. I like talking to people who see things
+the way I do. I like talking to the ones who do not even more.
 
 # Fun facts
 
 - I was born on 28 December 2004.
-- I was born in Kishoreganj, Bangladesh, but grew up mostly in Dhaka.
-- I wanted to be a pilot when I was young.
+- I was born in Kishoreganj, Bangladesh, and grew up mostly in Dhaka.
+- I wanted to be a pilot.
 - I started coding at twelve.
 - I lost 20 kilograms in under six months.
 - I had major eye surgery in 2017.
-- I have read more than 600 books, most of them fiction.
+- I have read more than 600 books. Most of them fiction.
 - I added this page because so many people complained that my site was just my resume.
 
 # I dream of
 
 - Inspiring people, and being inspired by them.
 - Staying curious.
-- Continually improving, and becoming a better version of myself.
+- Getting a little better than I was, and not stopping.
 - Not regretting my past actions.
