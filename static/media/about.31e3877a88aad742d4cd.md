@@ -64,10 +64,16 @@ academically and in club leadership at the same time.
 
 **2024.** Sat the university entrance exams and got into BUET for Computer Science and Engineering.
 
-**2025 onward.** Mostly hackathons. Thirty-two of them, four won, including a Grand Prize. What a
-list of awards does not show is that the first win came after a long streak of not winning
-anything. I have found no faster way to work on a problem I do not understand yet, with a real
-deadline and nowhere to hide behind a plan.
+**2025.** Hackathons, more or less constantly. What a list of awards does not show is that the
+first win arrived after a long streak of not winning anything. I still think it is the fastest way
+to work on a problem I do not understand yet, with a real deadline and nowhere to hide behind a
+plan.
+
+**2026.** Started entering competitions where the scoreboard is a metric instead of a panel. Three
+weeks of training runs on hours of noisy Bangla conversation for DL Sprint at BUET CSE Fest, and a
+Bengali hallucination detector for the IUT datathon that reached third on the leaderboard. It is a
+different kind of work from shipping a product, and I found I liked it. You cannot talk your way
+past a held-out test set.
 
 I have more stories. They are better over coffee than on the internet.
 
