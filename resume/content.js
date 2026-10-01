@@ -7,7 +7,7 @@
  * near-synonyms, or scoring stops meaning anything.
  *
  * Vocabulary in use:
- *   ai llm agents mcp ml nlp speech evaluation research
+ *   ai llm agents mcp ml nlp speech vision evaluation research
  *   backend api microservices database infra cloud aws gcp devops observability
  *   frontend react mobile ui design
  *   python typescript javascript java cpp
@@ -114,6 +114,66 @@ const experience = [
 
 const projects = [
   {
+    id: 'deepsift',
+    title: 'DeepSIFT, auditable digital forensics',
+    stack: 'MCP, Python, Volatility 3, MITRE ATT&amp;CK',
+    tags: ['mcp', 'agents', 'ai', 'llm', 'security', 'python', 'evaluation'],
+    bullets: [
+      {
+        tags: ['mcp', 'security', 'evaluation', 'llm'],
+        text: '148-tool Model Context Protocol layer that parses forensic binaries into structured '
+          + 'JSON before the model reads them, with a signable chain of custody. Scored 4/4 '
+          + 'against published ground truth on two cases, zero hallucinations, 100% claim '
+          + 'grounding.',
+      },
+    ],
+  },
+  {
+    id: 'trace',
+    title: 'TRACE, camera heart rate with no trained model',
+    stack: 'Python, NumPy, classical signal processing',
+    tags: ['ml', 'vision', 'healthcare', 'evaluation', 'research', 'python'],
+    bullets: [
+      {
+        tags: ['vision', 'evaluation', 'research', 'ml'],
+        text: 'Recovers a pulse from the sub-1% colour change a heartbeat makes in webcam video '
+          + 'using only convolution and the Fourier transform, switching between three published '
+          + 'methods every half second on spectral confidence. 4.62 BPM mean absolute error over '
+          + '20 volunteers against 5.63 for the best single method.',
+      },
+    ],
+  },
+  {
+    id: 'cascade',
+    title: 'Cascade, agent memory that expires on its own',
+    stack: 'Python, AWS, vector search',
+    tags: ['agents', 'ai', 'llm', 'aws', 'cloud', 'infra', 'database', 'evaluation', 'python'],
+    bullets: [
+      {
+        tags: ['agents', 'infra', 'evaluation', 'llm'],
+        text: 'Compiles a resolved incident into a runbook pinned to the version of every policy '
+          + 'rule it consulted, so editing one rule invalidates everything derived from it in '
+          + 'four writes, whether one procedure depends on it or a hundred thousand. Reuse calls '
+          + 'no model: retrieval is an index, freshness a join.',
+      },
+    ],
+  },
+  {
+    id: 'dejabug',
+    title: 'DejaBug, onboarding cases mined from real bug fixes',
+    stack: 'IBM Bob, TypeScript, Go and Python adapters',
+    tags: ['agents', 'llm', 'evaluation', 'devops', 'typescript', 'python'],
+    bullets: [
+      {
+        tags: ['evaluation', 'llm', 'devops'],
+        text: 'Mines a repository history for fix commits and certifies each one in a parallel '
+          + 'worktree, requiring the fix\'s own test to fail three times out of three before the '
+          + 'fix and pass after it, rejecting flaky and non-compiling candidates with a reason. '
+          + '56 certified cases across three public Go and Python repositories.',
+      },
+    ],
+  },
+  {
     id: 'halfspread',
     title: 'HALFSPREAD, autonomous options trading agent',
     stack: 'Python, Alpaca, GitHub Actions',
@@ -125,6 +185,21 @@ const projects = [
           + 'to 33% of contract value depending on time to expiry. Every published figure '
           + 're-derives from an append-only journal with no API key and no network, and the build '
           + 'fails if one stops reproducing.',
+      },
+    ],
+  },
+  {
+    id: 'rifq',
+    title: 'RIFQ, governed voice agent for early arrears',
+    stack: 'ElevenLabs, JavaScript, Ignyte Voice AI Challenge',
+    tags: ['ai', 'llm', 'speech', 'fintech', 'accessibility', 'javascript', 'evaluation'],
+    bullets: [
+      {
+        tags: ['speech', 'fintech', 'llm'],
+        text: 'Designed from interviews with two heads of collections: the moment a customer '
+          + 'states hardship the agent stops asking for money, suppresses every automated '
+          + 'contact, and opens a case with a named owner and an SLA. 68 automated checks cover '
+          + 'the scenarios in three languages and the pre-dial campaign gate.',
       },
     ],
   },
@@ -144,17 +219,16 @@ const projects = [
     ],
   },
   {
-    id: 'deepsift',
-    title: 'DeepSIFT, auditable digital forensics',
-    stack: 'MCP, Python, Volatility 3, MITRE ATT&amp;CK',
-    tags: ['mcp', 'agents', 'ai', 'llm', 'security', 'python', 'evaluation'],
+    id: 'aalapon',
+    title: 'Aalapon, Bangla voice companion for elderly parents',
+    stack: 'TypeScript, Grameenphone FutureMakers',
+    tags: ['ai', 'llm', 'speech', 'healthcare', 'accessibility', 'typescript'],
     bullets: [
       {
-        tags: ['mcp', 'security', 'evaluation', 'llm'],
-        text: '148-tool Model Context Protocol layer that parses forensic binaries into structured '
-          + 'JSON before the model reads them, with a signable chain of custody. Scored 4/4 '
-          + 'against published ground truth on two cases, zero hallucinations, 100% claim '
-          + 'grounding.',
+        tags: ['speech', 'healthcare', 'accessibility'],
+        text: 'Calls elderly parents daily in Bangla over an ordinary phone line, so a button '
+          + 'phone is enough, and turns what they say into short wellbeing updates and actions '
+          + 'the family approves from their own app.',
       },
     ],
   },
@@ -215,6 +289,21 @@ const competitions = [
           + 'ladder resolves most rows deterministically against source corpora and an '
           + '89k-question bank, sending only the residual to an open-weight judge with Wikipedia '
           + 'retrieval.',
+      },
+    ],
+  },
+  {
+    id: 'datparkinsons',
+    title: 'DaT Parkinson\'s Challenge, SPECT scan classification',
+    stack: 'DrivenData, 2026',
+    tags: ['ml', 'vision', 'healthcare', 'evaluation', 'research', 'python'],
+    bullets: [
+      {
+        tags: ['ml', 'vision', 'evaluation', 'research'],
+        text: 'Tenth on the private leaderboard at 0.2760 log loss, second highest AUROC in the '
+          + 'top ten at 0.9551. Registers the striatum to a template built from normal scans '
+          + 'with no atlas, then stacks regional binding ratios with 2D and slice-sequence '
+          + 'networks.',
       },
     ],
   },

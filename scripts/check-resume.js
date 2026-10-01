@@ -51,25 +51,56 @@ const main = () => {
   if (!fs.existsSync(PDF)) throw new Error(`No PDF at ${PDF}. Run npm run build:resume first.`);
 
   const profile = JSON.parse(fs.readFileSync(PROFILE, 'utf8'));
-  // The fitter may have trimmed, so compare against the widest render and
-  // treat absent words as "trimmed", not "broken". Ligature damage shows up as
-  // a word whose neighbours survived, which the report makes visible.
+  // Rendered at the widest budget, so this word list is a superset of what the
+  // fitter actually put on the page.
   const html = render(profile, {});
-  const body = html.split('<body>')[1].split('</body>')[0]
+  const clean = (s) => s
     .replace(/<[^>]+>/g, ' ')
     .replace(/&amp;/g, '&')
     .replace(/&[a-z]+;/g, ' ');
 
+  const body = clean(html.split('<body>')[1].split('</body>')[0]);
+
   const { pages, text } = extract(PDF);
   const lower = text.toLowerCase();
 
-  const words = [...new Set((body.match(/[A-Za-z][A-Za-z'./+-]{2,}/g) || []))];
-  const missing = words.filter((w) => !lower.includes(w.toLowerCase()));
+  const wordsIn = (s) => [...new Set((s.match(/[A-Za-z][A-Za-z'./+-]{2,}/g) || []))];
+  const absent = (w) => !lower.includes(w.toLowerCase());
 
-  // A word broken by a ligature usually leaves a telltale gap: the word is
-  // absent but a same-line neighbour is present. Flag anything containing a
-  // ligature pair as high risk.
-  const ligatureRisk = missing.filter((w) => /f[ilft]|ti/.test(w.toLowerCase()));
+  const words = wordsIn(body);
+  const missing = words.filter(absent);
+
+  /*
+   * Distinguishing "trimmed" from "broken".
+   *
+   * Both look identical from the PDF: a word in the source that is not in the
+   * text layer. The difference is its neighbours. A whole entry the fitter
+   * dropped goes missing together, while ligature damage takes one word out of
+   * a line whose other words came through fine.
+   *
+   * So the comparison is per entry, not over the whole document. An entry with
+   * nothing extracted was trimmed and is not evidence of anything. Only an
+   * entry that is partly present can show font damage, and this used to report
+   * every trimmed word containing "ti" or "fi" as a broken font.
+   */
+  const entries = html.split(/<\/li>|<\/section>/)
+    .map(clean)
+    .filter((block) => wordsIn(block).length > 2);
+
+  const rendered = new Set();
+  const trimmed = new Set();
+
+  entries.forEach((block) => {
+    const blockWords = wordsIn(block);
+    const here = blockWords.filter((w) => !absent(w));
+    // More than a third present means the entry is on the page: a trimmed entry
+    // still shares common words like "and" or "the" with the rest of the page.
+    if (here.length > blockWords.length / 3) blockWords.forEach((w) => rendered.add(w));
+    else blockWords.forEach((w) => trimmed.add(w));
+  });
+
+  const suspect = missing.filter((w) => rendered.has(w) || !trimmed.has(w));
+  const ligatureRisk = suspect.filter((w) => /f[ilft]|ti/.test(w.toLowerCase()));
 
   console.log(`PDF            ${path.relative(process.cwd(), PDF)}`);
   console.log(`Pages          ${pages}`);
@@ -95,7 +126,8 @@ const main = () => {
     bad = true;
   }
   if (missing.length && !ligatureRisk.length) {
-    console.log(`\nNote: ${missing.length} word(s) absent, most likely trimmed by the one-page fitter rather than broken:`);
+    console.log(`\nNote: ${missing.length} word(s) absent, from entries the one-page fitter `
+      + 'trimmed rather than from font damage:');
     console.log(`  ${missing.slice(0, 20).join(', ')}`);
   }
 

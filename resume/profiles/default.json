@@ -2,9 +2,17 @@
   "slug": "default",
   "role": "",
   "company": "",
-  "note": "The general resume published on the site. Balanced: no tag is boosted, so everything keeps its authored order.",
+  "note": "The general resume published on the site. No tag is boosted, so items keep their authored order and the fitter trims from the end. The drop list is what keeps this a general resume rather than a catalogue: everything named here is still in content.js and still available to any tailored profile that wants it.",
   "emphasis": [],
   "deprioritise": [],
   "pin": [],
-  "drop": ["zero", "doclyst"]
+  "drop": [
+    "halfspread",
+    "cassandra",
+    "dejabug",
+    "rifq",
+    "aalapon",
+    "zero",
+    "doclyst"
+  ]
 }
