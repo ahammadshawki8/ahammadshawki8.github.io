@@ -13,6 +13,7 @@
 const data = [
   {
     title: 'Bias Bounty Mapping Equity Challenge',
+    image: '/images/projects/biasbounty.jpg',
     link: 'https://github.com/ahammadshawki8/bias-bounty-yesternity',
     date: '2026-10-18',
     event: 'Zindi, with team Yesternity',
@@ -27,6 +28,7 @@ const data = [
   },
   {
     title: 'Bloom',
+    image: '/images/projects/bloom.jpg',
     link: 'https://github.com/ahammadshawki8/bloom',
     date: '2026-10-13',
     event: 'YouCam Skin AI and eCommerce VTO Hackathon',
@@ -41,6 +43,7 @@ const data = [
   },
   {
     title: 'R.O.A.D. Barbados Historic Handwriting',
+    image: '/images/projects/roadbarbados.jpg',
     link: 'https://github.com/ahammadshawki8/R.O.A.D.-Barbados-Historic-Handwriting-Challenge',
     date: '2026-10-10',
     event: 'Zindi, with team Emnei',
@@ -55,6 +58,7 @@ const data = [
   },
   {
     title: 'TRACE',
+    image: '/images/projects/trace.jpg',
     link: 'https://github.com/ahammadshawki8/TRACE-rPPG',
     date: '2026-09-29',
     tags: ['Python', 'NumPy', 'Signal Processing', 'Fourier Analysis', 'rPPG'],
@@ -69,6 +73,7 @@ const data = [
   },
   {
     title: 'DejaBug',
+    image: '/images/projects/dejabug.jpg',
     link: 'https://ahammadshawki8.github.io/DejaBug/',
     repo: 'https://github.com/ahammadshawki8/DejaBug',
     date: '2026-09-27',
@@ -85,6 +90,7 @@ const data = [
   },
   {
     title: 'DaT Parkinson\'s Challenge',
+    image: '/images/projects/datparkinsons.jpg',
     link: 'https://ahammadshawki8.github.io/dat-parkinsons-challenge/',
     repo: 'https://github.com/ahammadshawki8/dat-parkinsons-challenge',
     date: '2026-09-17',
@@ -100,6 +106,7 @@ const data = [
   },
   {
     title: 'Shoulder',
+    image: '/images/projects/shoulder.jpg',
     link: 'https://devpost.com/software/shoulder',
     repo: 'https://github.com/ahammadshawki8/Shoulder',
     date: '2026-09-13',
