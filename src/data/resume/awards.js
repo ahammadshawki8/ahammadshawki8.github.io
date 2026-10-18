@@ -9,6 +9,17 @@
  */
 const awards = [
   {
+    title: 'Winner, Golden Agent',
+    org: 'Agents for Humans Hackathon, Everyday Agents category',
+    date: '2026-09-13',
+    project: 'Shoulder',
+    link: 'https://devpost.com/software/shoulder',
+    summary:
+      'Category win for a system of private per-sibling agents that negotiate the family '
+      + 'caregiving rota between themselves, where a constraint shapes the outcome but the '
+      + 'reason behind it structurally cannot leave the agent that holds it.',
+  },
+  {
     title: 'Grand Prize Winner',
     org: 'FLIR App Challenge 2025 to 2026',
     date: '2026-06-01',

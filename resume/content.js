@@ -153,8 +153,7 @@ const projects = [
         tags: ['agents', 'infra', 'evaluation', 'llm'],
         text: 'Compiles a resolved incident into a runbook pinned to the version of every policy '
           + 'rule it consulted, so editing one rule invalidates everything derived from it in '
-          + 'four writes, whether one procedure depends on it or a hundred thousand. Reuse calls '
-          + 'no model: retrieval is an index, freshness a join.',
+          + 'four writes. Reuse calls no model: retrieval is an index, freshness a join.',
       },
     ],
   },
@@ -329,6 +328,11 @@ const awards = [
     text: '<strong>Grand Prize Winner</strong>, FLIR App Challenge 2025 to 2026, for SolarSnap.',
   },
   {
+    tags: ['agents', 'llm', 'healthcare'],
+    text: '<strong>Winner, Golden Agent</strong>, Everyday Agents category, Agents for Humans '
+      + 'Hackathon, 2026, for Shoulder.',
+  },
+  {
     tags: ['ml', 'speech', 'healthcare'],
     text: '<strong>Best Overall Project</strong>, ML Empowerment Build Challenge 2.0, 2026, for '
       + 'CADENCE.',
@@ -343,7 +347,6 @@ const awards = [
     text: '<strong>Honourable Mention</strong>, LMA EDGE Hackathon, 2026, presented at the London '
       + 'finale, for Coven.',
   },
-  { tags: [], text: 'Four wins across 32 hackathons entered.' },
 ];
 
 const skills = [

@@ -12,6 +12,111 @@
  */
 const data = [
   {
+    title: 'Bias Bounty Mapping Equity Challenge',
+    link: 'https://github.com/ahammadshawki8/bias-bounty-yesternity',
+    date: '2026-10-18',
+    event: 'Zindi, with team Yesternity',
+    tags: ['Python', 'Overture Maps', 'Geospatial', 'Fairness', 'Kaggle Fleet'],
+    desc:
+      'Finding where a mapping dataset is least equitable, tract by tract. The competition '
+      + 'republished its data a month in, which invalidated most of the published guidance and '
+      + 'meant rebuilding the feature pipeline around Overture rather than the original package. '
+      + 'Features for every region are derived on free Kaggle hardware through a multi-account '
+      + 'runner, and every submission is tracked against a leaderboard ledger so a score can '
+      + 'always be traced back to the run that produced it. Closes 31 October 2026.',
+  },
+  {
+    title: 'Bloom',
+    link: 'https://github.com/ahammadshawki8/bloom',
+    date: '2026-10-13',
+    event: 'YouCam Skin AI and eCommerce VTO Hackathon',
+    tags: ['Next.js', 'MediaPipe', 'Fastify', 'PostgreSQL', 'CIEDE2000'],
+    desc:
+      'Choose your hair before treatment does. Bloom is a try-on studio for the weeks before '
+      + 'chemotherapy: while her hair is still her own it records a hair passport, measuring '
+      + 'colour on the phone with on-device segmentation and median CIELAB rather than uploading '
+      + 'anything, then matches real wigs by CIEDE2000 distance and lets her try them on her own '
+      + 'face. Length is measured on the render, not the product page, so it says where a wig '
+      + 'ends on her. Family vote on her favourites through a private link.',
+  },
+  {
+    title: 'R.O.A.D. Barbados Historic Handwriting',
+    link: 'https://github.com/ahammadshawki8/R.O.A.D.-Barbados-Historic-Handwriting-Challenge',
+    date: '2026-10-10',
+    event: 'Zindi, with team Emnei',
+    tags: ['Qwen3-VL', 'TrOCR', 'Florence-2', 'PaddleOCR', 'Ensembles'],
+    desc:
+      'Transcribing handwritten lines from 17th and 18th century Barbados legal records. '
+      + 'Finished 51st at 0.92385 private against a winning 0.93306, with an equal-weight MBR '
+      + 'vote over 34 fine-tuned line readers spanning Qwen3-VL, Qwen3.5, Florence-2, '
+      + 'multicentury TrOCR, GLM-OCR, PaddleOCR-VL and CRNN-CTC. All of it trained on free '
+      + 'Kaggle T4s, with nine to eleven accounts driven from one machine by a resumable fleet '
+      + 'runner and a private Hugging Face repository as the model store.',
+  },
+  {
+    title: 'TRACE',
+    link: 'https://github.com/ahammadshawki8/TRACE-rPPG',
+    date: '2026-09-29',
+    tags: ['Python', 'NumPy', 'Signal Processing', 'Fourier Analysis', 'rPPG'],
+    desc:
+      'Heart rate from an ordinary webcam, with no trained model anywhere between pixels and '
+      + 'BPM. Every heartbeat pushes a little more blood into the face and the camera sees a '
+      + 'colour change of under one percent; convolution and the Fourier transform recover the '
+      + 'rhythm. Three published methods run at once and TRACE keeps whichever spectrum it '
+      + 'trusts most, every half second, and says "low confidence, hold still" when none of them '
+      + 'earns it. 4.62 BPM mean absolute error across 20 volunteers against 5.63 for the best '
+      + 'single method, and 2.89 BPM on the readings it marks confident.',
+  },
+  {
+    title: 'DejaBug',
+    link: 'https://ahammadshawki8.github.io/DejaBug/',
+    repo: 'https://github.com/ahammadshawki8/DejaBug',
+    date: '2026-09-27',
+    event: 'IBM Bob 2.0 Hackathon, lablab.ai',
+    tags: ['IBM Bob', 'TypeScript', 'Go', 'Python', 'Git'],
+    desc:
+      'Pilots train on replays of real incidents; new hires could train on your team\'s real '
+      + 'bugs. DejaBug mines a repository history for fix commits and certifies each one in a '
+      + 'parallel worktree, restoring the code from just before the fix and requiring the fix\'s '
+      + 'own test to fail three times out of three and then pass. Flaky and non-compiling '
+      + 'candidates are rejected with a reason. The survivors become cold cases in a detective '
+      + 'game, coached by a read-only mentor that cannot write the fix for you. 56 certified '
+      + 'cases across three public Go and Python repositories.',
+  },
+  {
+    title: 'DaT Parkinson\'s Challenge',
+    link: 'https://ahammadshawki8.github.io/dat-parkinsons-challenge/',
+    repo: 'https://github.com/ahammadshawki8/dat-parkinsons-challenge',
+    date: '2026-09-17',
+    event: 'DrivenData, French Society of Nuclear Medicine',
+    tags: ['PyTorch', 'EfficientNet', 'Medical Imaging', 'Registration', 'Ensembles'],
+    desc:
+      'Predicting whether a dopamine transporter SPECT scan is abnormal, scored on log loss. '
+      + 'Tenth on the private leaderboard at 0.2760, with the second highest AUROC in the top '
+      + 'ten at 0.9551. The pipeline finds the striatum without an atlas, registers each scan to '
+      + 'a template built from normal training scans, then stacks regional binding ratios with '
+      + '2D and slice-sequence networks. Roughly 60 experiments, of which five actually improved '
+      + 'the model, all of them recorded.',
+  },
+  {
+    title: 'Shoulder',
+    link: 'https://devpost.com/software/shoulder',
+    repo: 'https://github.com/ahammadshawki8/Shoulder',
+    date: '2026-09-13',
+    award: 'Winner, Golden Agent, Everyday Agents',
+    event: 'Agents for Humans Hackathon',
+    tags: ['Strands Agents', 'Python', 'A2A Protocol', 'Multi-agent', 'Privacy'],
+    desc:
+      'In three families out of four, one adult child becomes the carer, by default rather than '
+      + 'agreement. Caregiving apps show you that inequity; none redistribute it, because '
+      + 'redistribution means negotiating between people. Shoulder gives each sibling an agent '
+      + 'holding constraints they would never say aloud, and the agents negotiate a rota between '
+      + 'themselves. A position can leave an agent; the reason behind it structurally cannot, '
+      + 'because the type carrying it has no field for one. A hook reads every message before it '
+      + 'leaves and a wire log audits what actually crossed. Fair division is deterministic: no '
+      + 'model touches those numbers.',
+  },
+  {
     title: 'HALFSPREAD',
     image: '/images/projects/halfspread.jpg',
     link: 'https://ahammadshawki8.github.io/halfspread/',
