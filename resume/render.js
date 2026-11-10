@@ -232,7 +232,7 @@ const render = (profile = {}, budget = {}) => {
     experience: nExp = 99,
     bulletsPerJob = 99,
     awards: nAwards = 99,
-    coursework: nCourses = 5,
+    coursework: nCourses = 12,
     fontPt = 9.5,
     lineHeight = 1.22,
   } = budget;
@@ -290,6 +290,8 @@ ${sections.join('\n\n')}
 const BUDGETS = [
   {},
   { projects: 8, competitions: 5 },
+  { projects: 8, competitions: 4 },
+  { projects: 8, competitions: 4, coursework: 10 },
   { projects: 6, competitions: 4 },
   { projects: 6, competitions: 4, coursework: 4 },
   { projects: 5, competitions: 4, coursework: 4 },

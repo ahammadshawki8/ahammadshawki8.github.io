@@ -13,7 +13,17 @@
     "llm"
   ],
   "deprioritise": [],
-  "pin": ["shoulder", "robi"],
-  "drop": ["zero", "doclyst", "cassandra", "dejabug"],
+  "pin": [
+    "shoulder",
+    "robi"
+  ],
+  "drop": [
+    "rifq",
+    "halfspread",
+    "someone",
+    "cassandra",
+    "zero",
+    "doclyst"
+  ],
   "why": "Fifth place and a Top 10 finish at Data Privacy Avengers 2026 with team TheCypherGirls. The work that followed it is in the same direction: systems where privacy is enforced by the shape of the data rather than by a promise, voice that works in Bangla over an ordinary phone line, and customer contact that stops when someone says they are in trouble."
 }

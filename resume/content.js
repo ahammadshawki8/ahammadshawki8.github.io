@@ -31,38 +31,22 @@ const education = {
   where: 'Dhaka, Bangladesh',
   // Rendered in this order; the fitter trims from the end when space is short.
   coursework: [
-    { name: 'Data Structures and Algorithms I and II', tags: ['cpp', 'research'] },
+    { name: 'Data Structures and Algorithms', tags: ['cpp', 'research'] },
+    { name: 'Object Oriented Programming', tags: ['java'] },
     { name: 'Database', tags: ['database', 'backend'] },
-    { name: 'Software Engineering', tags: ['backend'] },
+    { name: 'Digital Logic Design', tags: ['cpp'] },
     { name: 'Computer Architecture', tags: ['cpp'] },
     { name: 'Theory of Computation', tags: ['research'] },
-    { name: 'Object Oriented Programming', tags: ['java'] },
+    { name: 'Software Engineering', tags: ['backend'] },
+    { name: 'Linear Algebra', tags: ['ml', 'research'] },
+    { name: 'Probability and Statistics', tags: ['ml', 'research'] },
+    { name: 'Advanced Calculus', tags: ['ml', 'research'] },
     { name: 'Discrete Mathematics', tags: ['research'] },
     { name: 'Signals and Linear Systems', tags: ['speech', 'ml'] },
   ],
 };
 
 const experience = [
-  {
-    id: 'srotdev',
-    role: 'Founder and Developer',
-    org: 'SrotDev',
-    link: 'https://github.com/SrotDev',
-    when: 'May 2025 to Present',
-    tags: ['leadership', 'backend', 'frontend', 'react', 'python', 'microservices'],
-    bullets: [
-      {
-        tags: ['frontend', 'backend', 'react', 'python', 'database'],
-        text: 'Lead an engineering collective shipping production web and mobile apps in React, '
-          + 'Next.js, Django, FastAPI and PostgreSQL.',
-      },
-      {
-        tags: ['microservices', 'backend', 'infra', 'observability', 'devops'],
-        text: 'Architected CareForAll as seven deployable Django services behind an API gateway, '
-          + 'with its own Prometheus and Grafana stack.',
-      },
-    ],
-  },
   {
     id: 'nditc',
     role: 'President of Web and App Development',
@@ -108,8 +92,22 @@ const projects = [
     bullets: [
       {
         tags: ['mcp', 'security', 'evaluation', 'llm'],
-        text: '148 forensic MCP tools that parse binaries to typed JSON before the model reads '
-          + 'them. 4/4 against published ground truth, zero hallucinations, 100% claim grounding.',
+        text: '148 forensic MCP tools parse binaries to typed JSON first. 4/4 on published ground '
+          + 'truth, zero hallucinations.',
+      },
+    ],
+  },
+  {
+    id: 'cadence',
+    title: 'CADENCE',
+    link: 'https://devpost.com/software/cadence-y6i1cs',
+    stack: 'Python, PyTorch, speech',
+    tags: ['ml', 'speech', 'healthcare', 'evaluation', 'python', 'research'],
+    bullets: [
+      {
+        tags: ['ml', 'speech', 'evaluation', 'research'],
+        text: 'Won best overall. Parkinson\'s from 30 seconds of voice, validated across three '
+          + 'language corpora, not one split.',
       },
     ],
   },
@@ -122,8 +120,8 @@ const projects = [
     bullets: [
       {
         tags: ['vision', 'accessibility', 'llm'],
-        text: 'Everyday photos become speech for people who cannot rely on it. SAM 3.1 outlines '
-          + 'every person and object; tapping one speaks. Built for the Meta Global AI Hackathon.',
+        text: 'Photos become speech for people who cannot rely on it. SAM 3.1 outlines every object; '
+          + 'tapping one speaks.',
       },
     ],
   },
@@ -136,8 +134,8 @@ const projects = [
     bullets: [
       {
         tags: ['security', 'agents', 'evaluation'],
-        text: 'Private per-sibling agents negotiate a family care rota. A position may leave an '
-          + 'agent; the reason behind it has no field to travel in. Fair division is deterministic.',
+        text: 'Private per-sibling agents negotiate a care rota. A reason has no field to travel in. '
+          + 'Fair division is code.',
       },
     ],
   },
@@ -150,8 +148,8 @@ const projects = [
     bullets: [
       {
         tags: ['agents', 'infra', 'evaluation', 'llm'],
-        text: 'Agent memory that expires. Runbooks are pinned to the policy versions they came '
-          + 'from, so one edit invalidates every dependent procedure in four writes.',
+        text: 'Agent memory that expires. Runbooks are pinned to policy versions; one edit '
+          + 'invalidates them all in four writes.',
       },
     ],
   },
@@ -164,8 +162,8 @@ const projects = [
     bullets: [
       {
         tags: ['vision', 'evaluation', 'research', 'ml'],
-        text: 'Heart rate from webcam colour with no trained model, convolution and Fourier only. '
-          + '4.62 BPM error over 20 volunteers against 5.63 for the best published method.',
+        text: 'Heart rate from webcam colour with no trained model. 4.62 BPM error against 5.63 for '
+          + 'the best published method.',
       },
     ],
   },
@@ -178,8 +176,8 @@ const projects = [
     bullets: [
       {
         tags: ['vision', 'healthcare', 'design'],
-        text: 'Hands-free CPR on AR glasses: a sternum target at real size and a ring pulsing at '
-          + '110 a minute. 37% of trained bystanders who did not help said they panicked.',
+        text: 'Hands-free CPR on AR glasses: a sternum target at real size and a ring pulsing at 110 '
+          + 'a minute.',
       },
     ],
   },
@@ -192,8 +190,8 @@ const projects = [
     bullets: [
       {
         tags: ['agents', 'accessibility', 'devops'],
-        text: 'Agents turn a teacher emailed function into a raised-line braille graph, check it '
-          + 'as a fingertip would, ship it and order the print. By hand that is two hours in CAD.',
+        text: 'Agents turn an emailed function into a raised-line braille graph, check it, ship it '
+          + 'and order the print.',
       },
     ],
   },
@@ -206,8 +204,8 @@ const projects = [
     bullets: [
       {
         tags: ['evaluation', 'llm', 'devops'],
-        text: 'Turns a repository history into onboarding cases, each certified by requiring its '
-          + 'own test to fail three times out of three and then pass. 56 cases, three repos.',
+        text: 'Real bug fixes become onboarding cases, each certified by a test that fails 3 of 3 '
+          + 'then passes. 56 cases.',
       },
     ],
   },
@@ -285,16 +283,16 @@ const projects = [
 
 const competitions = [
   {
-    id: 'cadence',
-    title: 'CADENCE, Parkinson\'s from voice',
-    link: 'https://devpost.com/software/cadence-y6i1cs',
-    stack: 'ML Empowerment Challenge',
-    tags: ['ml', 'speech', 'healthcare', 'evaluation', 'python', 'research'],
+    id: 'barbados',
+    title: 'Historic handwriting transcription',
+    link: 'https://zindi.africa/competitions/road-barbados-historic-handwriting-challenge',
+    stack: 'R.O.A.D. Barbados, Zindi',
+    tags: ['ml', 'vision', 'nlp', 'research', 'python', 'evaluation'],
     bullets: [
       {
-        tags: ['ml', 'speech', 'evaluation', 'research'],
-        text: 'Won best overall project. 30 seconds of voice, validated across three language '
-          + 'corpora with cross-database testing and domain-adversarial training.',
+        tags: ['ml', 'vision', 'research'],
+        text: '0.92385 against a winning 0.93306, from an MBR vote over 34 fine-tuned readers on free '
+          + 'Kaggle hardware.',
       },
     ],
   },
@@ -307,8 +305,8 @@ const competitions = [
     bullets: [
       {
         tags: ['nlp', 'llm', 'evaluation', 'research'],
-        text: 'Third on the leaderboard at 0.922 F1. A decision ladder resolves most rows against '
-          + 'source corpora and a bank of 89,000 questions; only the residual reaches a judge.',
+        text: 'Third at 0.922 F1. A decision ladder resolves most rows deterministically; only the '
+          + 'residual reaches a judge.',
       },
     ],
   },
@@ -321,8 +319,8 @@ const competitions = [
     bullets: [
       {
         tags: ['ml', 'vision', 'evaluation', 'research'],
-        text: 'Tenth on the private leaderboard, 0.2760 log loss and 0.9551 AUROC. Striatum found '
-          + 'without an atlas, then binding ratios stacked with 2D and slice-sequence nets.',
+        text: 'Tenth on the private leaderboard, 0.2760 log loss and 0.9551 AUROC, from registration '
+          + 'plus stacked nets.',
       },
     ],
   },
@@ -335,8 +333,8 @@ const competitions = [
     bullets: [
       {
         tags: ['research', 'evaluation', 'civic'],
-        text: 'Highways double-counted across tract boundaries are 72% of the mean road coverage '
-          + 'gap, and they bend the equity scorecard built to reveal inequity.',
+        text: 'Double-counted boundary highways are 72% of the mean road gap, and they bend the '
+          + 'equity scorecard.',
       },
     ],
   },
@@ -349,8 +347,8 @@ const competitions = [
     bullets: [
       {
         tags: ['ml', 'speech', 'nlp'],
-        text: 'Hours-long audio with overlapping speakers, background music and long silences, '
-          + 'scored on word error rate weighted by sentence length.',
+        text: 'Hours-long Bangla audio with overlapping speakers, scored on word error rate weighted '
+          + 'by sentence length.',
       },
     ],
   },
@@ -405,50 +403,55 @@ const skills = [
       { name: 'JavaScript', tags: ['javascript', 'frontend'] },
       { name: 'Java', tags: ['java'] },
       { name: 'SQL', tags: ['database', 'backend'] },
-      { name: 'Dart', tags: ['mobile'] },
-      { name: 'HTML/CSS', tags: ['frontend'] },
     ],
   },
   {
-    category: 'Frameworks',
+    category: 'Machine learning',
     items: [
+      { name: 'cross-corpus validation', tags: ['ml', 'evaluation', 'research'] },
+      { name: 'domain-adversarial training', tags: ['ml', 'research'] },
+      { name: 'ensembling and stacking', tags: ['ml', 'research'] },
+      { name: 'probability calibration', tags: ['ml', 'evaluation'] },
+      { name: 'image registration', tags: ['vision', 'ml'] },
+      { name: 'classical signal processing', tags: ['speech', 'ml', 'vision'] },
+      { name: 'speech recognition', tags: ['speech', 'nlp'] },
+    ],
+  },
+  {
+    category: 'AI systems',
+    items: [
+      { name: 'multi-agent orchestration', tags: ['agents', 'llm'] },
+      { name: 'tool use and the Model Context Protocol', tags: ['mcp', 'agents', 'llm'] },
+      { name: 'retrieval augmented generation', tags: ['llm', 'nlp'] },
+      { name: 'per-claim grounding', tags: ['llm', 'evaluation', 'security'] },
+      { name: 'hallucination detection', tags: ['llm', 'nlp', 'evaluation'] },
+      { name: 'evaluation harness design', tags: ['evaluation', 'research'] },
+      { name: 'privacy boundaries enforced in types', tags: ['security', 'agents'] },
+    ],
+  },
+  {
+    category: 'Tools',
+    items: [
+      { name: 'PyTorch', tags: ['ml', 'research'] },
       { name: 'React', tags: ['react', 'frontend'] },
       { name: 'Next.js', tags: ['react', 'frontend'] },
       { name: 'Django', tags: ['backend', 'python'] },
-      { name: 'Django REST Framework', tags: ['backend', 'api', 'python'] },
       { name: 'FastAPI', tags: ['backend', 'api', 'python'] },
-      { name: 'Flask', tags: ['backend', 'python'] },
-      { name: 'Node.js', tags: ['backend', 'javascript'] },
-      { name: 'Flutter', tags: ['mobile'] },
-      { name: 'JavaFX', tags: ['java'] },
-    ],
-  },
-  {
-    category: 'AI and Machine Learning',
-    items: [
-      { name: 'PyTorch', tags: ['ml', 'research'] },
-      { name: 'scikit-learn', tags: ['ml'] },
-      { name: 'Model Context Protocol', tags: ['mcp', 'agents', 'llm'] },
-      { name: 'Google ADK', tags: ['agents', 'llm', 'gcp'] },
-      { name: 'Retrieval Augmented Generation', tags: ['llm', 'nlp'] },
-      { name: 'Whisper', tags: ['speech', 'ml'] },
-      { name: 'Gemini', tags: ['llm', 'ai'] },
-      { name: 'Claude', tags: ['llm', 'ai'] },
-      { name: 'Pandas', tags: ['ml', 'python'] },
-      { name: 'NumPy', tags: ['ml', 'python'] },
-    ],
-  },
-  {
-    category: 'Infrastructure',
-    items: [
-      { name: 'Docker', tags: ['infra', 'devops'] },
-      { name: 'Google Cloud (Cloud Run, Pub/Sub, Firestore, Vertex AI)', tags: ['gcp', 'cloud'] },
-      { name: 'AWS (Bedrock, ECS, Lambda)', tags: ['aws', 'cloud'] },
       { name: 'PostgreSQL', tags: ['database'] },
-      { name: 'MongoDB', tags: ['database'] },
-      { name: 'Redis', tags: ['database'] },
-      { name: 'GitHub Actions', tags: ['devops', 'infra'] },
-      { name: 'Grafana', tags: ['observability', 'devops'] },
+      { name: 'Docker', tags: ['infra', 'devops'] },
+      { name: 'AWS', tags: ['aws', 'cloud'] },
+      { name: 'Google Cloud', tags: ['gcp', 'cloud'] },
+    ],
+  },
+  {
+    category: 'Systems',
+    items: [
+      { name: 'microservice architecture', tags: ['microservices', 'backend'] },
+      { name: 'API design and gateways', tags: ['api', 'backend'] },
+      { name: 'relational and vector data modelling', tags: ['database', 'infra'] },
+      { name: 'observability and CI/CD', tags: ['observability', 'devops'] },
+      { name: 'cloud deployment on AWS and GCP', tags: ['cloud', 'aws', 'gcp', 'infra'] },
+      { name: 'containerisation', tags: ['infra', 'devops'] },
     ],
   },
 ];
