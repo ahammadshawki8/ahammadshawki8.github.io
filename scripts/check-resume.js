@@ -121,6 +121,9 @@ const main = () => {
     ? missing
     : missing.filter((w) => rendered.has(w) || !trimmed.has(w));
   const ligatureRisk = suspect.filter((w) => /f[ilft]|ti/.test(w.toLowerCase()));
+  // A hyphen that wraps loses the word just as surely as a ligature does:
+  // each half lands separately in the text layer and the whole never appears.
+  const hyphenRisk = suspect.filter((w) => w.includes('-') && !ligatureRisk.includes(w));
 
   console.log(`PDF            ${path.relative(process.cwd(), PDF)}`);
   console.log(`Pages          ${pages}`);
@@ -146,7 +149,13 @@ const main = () => {
     console.error(`\nFAIL: words absent that contain ligature pairs, likely broken by the font:\n  ${ligatureRisk.join(', ')}`);
     bad = true;
   }
-  if (missing.length && !ligatureRisk.length) {
+  if (hyphenRisk.length) {
+    console.error(`
+FAIL: hyphenated words absent, most likely wrapped at the hyphen:
+  ${hyphenRisk.join(', ')}`);
+    bad = true;
+  }
+  if (missing.length && !ligatureRisk.length && !hyphenRisk.length) {
     console.log(`\nNote: ${missing.length} word(s) absent, from entries the one-page fitter `
       + 'trimmed rather than from font damage:');
     console.log(`  ${missing.slice(0, 20).join(', ')}`);

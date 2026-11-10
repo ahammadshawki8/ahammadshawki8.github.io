@@ -47,23 +47,19 @@ const experience = [
     id: 'srotdev',
     role: 'Founder and Developer',
     org: 'SrotDev',
+    link: 'https://github.com/SrotDev',
     when: 'May 2025 to Present',
     tags: ['leadership', 'backend', 'frontend', 'react', 'python', 'microservices'],
     bullets: [
       {
         tags: ['frontend', 'backend', 'react', 'python', 'database'],
-        text: 'Lead an engineering collective shipping production web and mobile applications '
-          + 'across React, Next.js, Django, FastAPI and PostgreSQL.',
+        text: 'Lead an engineering collective shipping production web and mobile apps in React, '
+          + 'Next.js, Django, FastAPI and PostgreSQL.',
       },
       {
         tags: ['microservices', 'backend', 'infra', 'observability', 'devops'],
-        text: 'Architected CareForAll as seven independently deployable Django services behind an '
-          + 'API gateway, with its own Prometheus and Grafana observability stack.',
-      },
-      {
-        tags: ['frontend', 'accessibility', 'teaching'],
-        text: 'Built Srabon, a gamified science learning platform with multilingual and '
-          + 'accessibility support, as the team\'s flagship product.',
+        text: 'Architected CareForAll as seven deployable Django services behind an API gateway, '
+          + 'with its own Prometheus and Grafana stack.',
       },
     ],
   },
@@ -77,17 +73,12 @@ const experience = [
       {
         tags: ['leadership', 'frontend', 'mobile', 'ui'],
         text: 'Led a 30-person engineering team; delivered the rebuilt official website and the '
-          + 'UI/UX for the club\'s native mobile application.',
+          + 'UI/UX for the club mobile app.',
       },
       {
-        tags: ['leadership', 'community'],
-        text: 'Raised over 1,000,000 BDT in sponsorship across 100+ company negotiations for INIT, '
-          + 'the club\'s national annual event.',
-      },
-      {
-        tags: ['teaching', 'community'],
-        text: 'Taught web development fundamentals directly to more than 500 students as a '
-          + 'workshop instructor.',
+        tags: ['leadership', 'community', 'teaching'],
+        text: 'Raised over 1,000,000 BDT across 100+ sponsor negotiations, and taught web '
+          + 'development to more than 500 students.',
       },
     ],
   },
@@ -99,14 +90,9 @@ const experience = [
     tags: ['leadership', 'community', 'teaching', 'writing'],
     bullets: [
       {
-        tags: ['community', 'teaching'],
-        text: 'Built a developer community that reached more than 20,000 learners through free '
-          + 'programmes, courses and technical content.',
-      },
-      {
-        tags: ['community', 'writing'],
-        text: 'Partnered with Codecademy, Hack Club and DeepLearning.AI; wrote articles published '
-          + 'on freeCodeCamp News.',
+        tags: ['community', 'teaching', 'writing'],
+        text: 'Built a developer community reaching 20,000+ learners; partnered with Codecademy, '
+          + 'Hack Club and DeepLearning.AI, and wrote for freeCodeCamp News.',
       },
     ],
   },
@@ -115,208 +101,183 @@ const experience = [
 const projects = [
   {
     id: 'deepsift',
-    title: 'DeepSIFT, auditable digital forensics',
-    stack: 'MCP, Python, Volatility 3, MITRE ATT&amp;CK',
+    title: 'DeepSIFT',
+    link: 'https://github.com/ahammadshawki8/DeepSIFT',
+    stack: 'MCP, Python, Volatility 3',
     tags: ['mcp', 'agents', 'ai', 'llm', 'security', 'python', 'evaluation'],
     bullets: [
       {
         tags: ['mcp', 'security', 'evaluation', 'llm'],
-        text: '148-tool Model Context Protocol layer that parses forensic binaries into structured '
-          + 'JSON before the model reads them, with a signable chain of custody. Scored 4/4 '
-          + 'against published ground truth on two cases, zero hallucinations, 100% claim '
-          + 'grounding.',
+        text: '148 forensic MCP tools that parse binaries to typed JSON before the model reads '
+          + 'them. 4/4 against published ground truth, zero hallucinations, 100% claim grounding.',
       },
     ],
   },
   {
     id: 'momentalk',
-    title: 'Momentalk, photos that speak for people who cannot',
+    title: 'Momentalk',
+    link: 'https://momentalk.onrender.com',
     stack: 'SAM 3.1, Llama, TypeScript',
     tags: ['ai', 'llm', 'vision', 'accessibility', 'healthcare', 'typescript'],
     bullets: [
       {
         tags: ['vision', 'accessibility', 'llm'],
-        text: 'A caregiver photographs a real moment and every person and object in it is '
-          + 'outlined and speaks when tapped, so a child who cannot rely on speech points at '
-          + 'their own world and it talks for them. Built in the ten days of the Meta Global AI '
-          + 'Developer Hackathon, segmentation by SAM 3.1.',
+        text: 'Everyday photos become speech for people who cannot rely on it. SAM 3.1 outlines '
+          + 'every person and object; tapping one speaks. Built for the Meta Global AI Hackathon.',
       },
     ],
   },
   {
     id: 'shoulder',
-    title: 'Shoulder, private agents that share out family care',
-    stack: 'Strands Agents, A2A protocol, Python',
+    title: 'Shoulder',
+    link: 'https://devpost.com/software/shoulder',
+    stack: 'Strands Agents, A2A, Python',
     tags: ['agents', 'ai', 'llm', 'security', 'accessibility', 'python', 'evaluation'],
     bullets: [
       {
         tags: ['security', 'agents', 'evaluation'],
-        text: 'In three families out of four one adult child becomes the carer, by default. Each '
-          + 'sibling gets an agent holding constraints they would never say aloud, and the agents '
-          + 'negotiate the rota between themselves. A position can leave an agent; the reason '
-          + 'behind it cannot, because the type carrying it has no field for one, a runtime hook '
-          + 'checks every message before it leaves, and a wire log audits what crossed. Fair '
-          + 'division is deterministic: no model touches those numbers.',
-      },
-    ],
-  },
-  {
-    id: 'trace',
-    title: 'TRACE, camera heart rate with no trained model',
-    stack: 'Python, NumPy, classical signal processing',
-    tags: ['ml', 'vision', 'healthcare', 'evaluation', 'research', 'python'],
-    bullets: [
-      {
-        tags: ['vision', 'evaluation', 'research', 'ml'],
-        text: 'Recovers a pulse from the sub-1% colour change a heartbeat makes in webcam video '
-          + 'using only convolution and the Fourier transform, switching between three published '
-          + 'methods every half second on spectral confidence. 4.62 BPM mean absolute error over '
-          + '20 volunteers against 5.63 for the best single method.',
-      },
-    ],
-  },
-  {
-    id: 'someone',
-    title: 'Someone, hands-free CPR guidance on AR glasses',
-    stack: 'Snap SPECS, Lens Studio, CLAD',
-    tags: ['ai', 'vision', 'healthcare', 'accessibility', 'design'],
-    bullets: [
-      {
-        tags: ['vision', 'healthcare', 'design'],
-        text: 'Of trained bystanders who did not help at a cardiac arrest, 37% said they simply '
-          + 'panicked. A target sits on the sternum at real size, a ring pulses at 110 a minute '
-          + 'and turns mint on pace, and a chevron points at one named person rather than saying '
-          + 'send someone. Agent-built through CLAD and checked with LEAF runs.',
-      },
-    ],
-  },
-  {
-    id: 'locus',
-    title: 'Locus, tactile maths graphs for blind students',
-    stack: 'GitLab Duo agents, Node, Cloud Run',
-    tags: ['agents', 'ai', 'accessibility', 'devops', 'cloud', 'javascript'],
-    bullets: [
-      {
-        tags: ['agents', 'accessibility', 'devops'],
-        text: 'A teacher emails a function and agents turn it into a raised-line graph with '
-          + 'braille labels, check it the way a fingertip would, correct their own mistakes, ship '
-          + 'it and order the print. Doing one well by hand in CAD takes about two hours.',
+        text: 'Private per-sibling agents negotiate a family care rota. A position may leave an '
+          + 'agent; the reason behind it has no field to travel in. Fair division is deterministic.',
       },
     ],
   },
   {
     id: 'cascade',
-    title: 'Cascade, agent memory that expires on its own',
+    title: 'Cascade',
+    link: 'https://github.com/ahammadshawki8/Cascade',
     stack: 'Python, AWS, vector search',
     tags: ['agents', 'ai', 'llm', 'aws', 'cloud', 'infra', 'database', 'evaluation', 'python'],
     bullets: [
       {
         tags: ['agents', 'infra', 'evaluation', 'llm'],
-        text: 'Compiles a resolved incident into a runbook pinned to the version of every policy '
-          + 'rule it consulted, so editing one rule invalidates everything derived from it in '
-          + 'four writes. Reuse calls no model: retrieval is an index, freshness a join.',
+        text: 'Agent memory that expires. Runbooks are pinned to the policy versions they came '
+          + 'from, so one edit invalidates every dependent procedure in four writes.',
+      },
+    ],
+  },
+  {
+    id: 'trace',
+    title: 'TRACE',
+    link: 'https://github.com/ahammadshawki8/TRACE-rPPG',
+    stack: 'Python, signal processing',
+    tags: ['ml', 'vision', 'healthcare', 'evaluation', 'research', 'python'],
+    bullets: [
+      {
+        tags: ['vision', 'evaluation', 'research', 'ml'],
+        text: 'Heart rate from webcam colour with no trained model, convolution and Fourier only. '
+          + '4.62 BPM error over 20 volunteers against 5.63 for the best published method.',
+      },
+    ],
+  },
+  {
+    id: 'someone',
+    title: 'Someone',
+    link: 'https://github.com/ahammadshawki8/Someone',
+    stack: 'Snap SPECS, Lens Studio, CLAD',
+    tags: ['ai', 'vision', 'healthcare', 'accessibility', 'design'],
+    bullets: [
+      {
+        tags: ['vision', 'healthcare', 'design'],
+        text: 'Hands-free CPR on AR glasses: a sternum target at real size and a ring pulsing at '
+          + '110 a minute. 37% of trained bystanders who did not help said they panicked.',
+      },
+    ],
+  },
+  {
+    id: 'locus',
+    title: 'Locus',
+    link: 'https://github.com/ahammadshawki8/locus',
+    stack: 'GitLab Duo agents, Cloud Run',
+    tags: ['agents', 'ai', 'accessibility', 'devops', 'cloud', 'javascript'],
+    bullets: [
+      {
+        tags: ['agents', 'accessibility', 'devops'],
+        text: 'Agents turn a teacher emailed function into a raised-line braille graph, check it '
+          + 'as a fingertip would, ship it and order the print. By hand that is two hours in CAD.',
       },
     ],
   },
   {
     id: 'dejabug',
-    title: 'DejaBug, onboarding cases mined from real bug fixes',
-    stack: 'IBM Bob, TypeScript, Go and Python adapters',
+    title: 'DejaBug',
+    link: 'https://ahammadshawki8.github.io/DejaBug/',
+    stack: 'IBM Bob, TypeScript, Go',
     tags: ['agents', 'llm', 'evaluation', 'devops', 'typescript', 'python'],
     bullets: [
       {
         tags: ['evaluation', 'llm', 'devops'],
-        text: 'Mines a repository history for fix commits and certifies each one in a parallel '
-          + 'worktree, requiring the fix\'s own test to fail three times out of three before the '
-          + 'fix and pass after it, rejecting flaky and non-compiling candidates with a reason. '
-          + '56 certified cases across three public Go and Python repositories.',
+        text: 'Turns a repository history into onboarding cases, each certified by requiring its '
+          + 'own test to fail three times out of three and then pass. 56 cases, three repos.',
       },
     ],
   },
   {
     id: 'halfspread',
-    title: 'HALFSPREAD, autonomous options trading agent',
+    title: 'HALFSPREAD',
+    link: 'https://github.com/ahammadshawki8/halfspread',
     stack: 'Python, Alpaca, GitHub Actions',
     tags: ['agents', 'ai', 'python', 'fintech', 'evaluation', 'devops'],
     bullets: [
       {
         tags: ['fintech', 'evaluation', 'agents'],
-        text: 'Prices execution cost before every order, having measured bid-ask cost from 0.52% '
-          + 'to 33% of contract value depending on time to expiry. Every published figure '
-          + 're-derives from an append-only journal with no API key and no network, and the build '
-          + 'fails if one stops reproducing.',
+        text: 'An options agent that prices its exit before it enters: crossing costs 0.52% on '
+          + 'NVDA and 33% near expiry. Every figure is rebuilt from an append-only journal or the build fails.',
       },
     ],
   },
   {
     id: 'rifq',
-    title: 'RIFQ, governed voice agent for early arrears',
-    stack: 'ElevenLabs, JavaScript, Ignyte Voice AI Challenge',
+    title: 'RIFQ',
+    link: 'https://ahammadshawki8.github.io/RIFQ/',
+    stack: 'ElevenLabs, JavaScript',
     tags: ['ai', 'llm', 'speech', 'fintech', 'accessibility', 'javascript', 'evaluation'],
     bullets: [
       {
         tags: ['speech', 'fintech', 'llm'],
-        text: 'Designed from interviews with two heads of collections: the moment a customer '
-          + 'states hardship the agent stops asking for money, suppresses every automated '
-          + 'contact, and opens a case with a named owner and an SLA. 68 automated checks cover '
-          + 'the scenarios in three languages and the pre-dial campaign gate.',
+        text: 'A collections voice agent that stops asking for money the moment hardship is '
+          + 'stated, suppresses contact and opens a case with a named owner. 68 checks, 3 languages.',
       },
     ],
   },
   {
     id: 'cassandra',
-    title: 'Cassandra, autonomous spreadsheet repair',
-    stack: 'Google ADK, Gemini, Cloud Run, Firestore',
+    title: 'Cassandra',
+    link: 'https://github.com/ahammadshawki8/Cassandra',
+    stack: 'Google ADK, Gemini, Cloud Run',
     tags: ['agents', 'ai', 'llm', 'gcp', 'cloud', 'python', 'evaluation'],
     bullets: [
       {
         tags: ['agents', 'llm', 'evaluation'],
-        text: 'Agent fleet that repairs spreadsheet defects and proves each fix by recalculating '
-          + 'the workbook, rejecting any correction that moves the wrong cell. Repaired five '
-          + 'defects in 114 seconds unattended on a model reporting $6.2M in income for a company '
-          + 'that had lost $1.7M.',
-      },
-    ],
-  },
-  {
-    id: 'aalapon',
-    title: 'Aalapon, Bangla voice companion for elderly parents',
-    stack: 'TypeScript, Grameenphone FutureMakers',
-    tags: ['ai', 'llm', 'speech', 'healthcare', 'accessibility', 'typescript'],
-    bullets: [
-      {
-        tags: ['speech', 'healthcare', 'accessibility'],
-        text: 'Calls elderly parents daily in Bangla over an ordinary phone line, so a button '
-          + 'phone is enough, and turns what they say into short wellbeing updates and actions '
-          + 'the family approves from their own app.',
+        text: 'Continuous integration for spreadsheets: an agent fleet repairs defects and proves '
+          + 'each fix by recalculating the workbook. Five defects in 114 seconds, unattended.',
       },
     ],
   },
   {
     id: 'zero',
-    title: 'Zero, gamified waste management platform',
-    stack: 'React, TypeScript, Leaflet, Flask, PostgreSQL',
+    title: 'Zero',
+    link: 'https://github.com/ahammadshawki8/Zero',
+    stack: 'React, TypeScript, Flask',
     tags: ['frontend', 'react', 'typescript', 'backend', 'database', 'civic', 'ai'],
     bullets: [
       {
         tags: ['frontend', 'backend', 'civic'],
-        text: 'Connects citizens, cleaners and administrators around one verified workflow: a '
-          + 'photo report is classified and mapped by point-in-polygon check, and payment '
-          + 'releases only after before-and-after image comparison and a citizen review.',
+        text: 'Waste reporting where payment releases only after a before-and-after image check '
+          + 'and a citizen review.',
       },
     ],
   },
   {
     id: 'doclyst',
-    title: 'Doclyst, medical report interpreter',
-    stack: 'ERNIE, PaddleOCR, Flask, React',
+    title: 'Doclyst',
+    link: 'https://devpost.com/software/doclyst',
+    stack: 'ERNIE, PaddleOCR, Flask',
     tags: ['ai', 'llm', 'nlp', 'healthcare', 'frontend', 'python'],
     bullets: [
       {
         tags: ['llm', 'healthcare', 'nlp'],
-        text: 'Reads a lab report, extracts values with OCR, and returns a plain-language '
-          + 'explanation with safety alerts in under 30 seconds. Won Best ERNIE Multimodal '
-          + 'Application at Baidu\'s developer challenge.',
+        text: 'Reads a lab report and returns a plain-language explanation with safety alerts in '
+          + 'under 30 seconds. Won Best ERNIE Multimodal Application at Baidu.',
       },
     ],
   },
@@ -324,74 +285,72 @@ const projects = [
 
 const competitions = [
   {
-    id: 'biasbounty',
-    title: 'Phantom Road Gaps, Bias Bounty Mapping Equity',
-    stack: 'Humane Intelligence and Zindi, 2026',
-    tags: ['ml', 'research', 'evaluation', 'civic', 'python'],
-    bullets: [
-      {
-        tags: ['research', 'evaluation', 'civic'],
-        text: 'A highway on a tract boundary is counted in both tracts, and one carrying two '
-          + 'route numbers is counted twice again. Those two rules make up 72% of the mean road '
-          + 'coverage gap and bend the equity scorecard built to reveal inequity: counted once, '
-          + 'the rural to urban ratio moves from 2.34 to 2.73.',
-      },
-    ],
-  },
-  {
     id: 'cadence',
-    title: 'CADENCE, voice-based Parkinson\'s screening',
-    stack: 'ML Empowerment Build Challenge, 2026',
+    title: 'CADENCE, Parkinson\'s from voice',
+    link: 'https://devpost.com/software/cadence-y6i1cs',
+    stack: 'ML Empowerment Challenge',
     tags: ['ml', 'speech', 'healthcare', 'evaluation', 'python', 'research'],
     bullets: [
       {
         tags: ['ml', 'speech', 'evaluation', 'research'],
-        text: 'Won best overall project. Screens from a 30-second voice sample and explains every '
-          + 'score, validated across three independent language corpora using cross-database '
-          + 'testing and domain-adversarial training to avoid microphone bias.',
+        text: 'Won best overall project. 30 seconds of voice, validated across three language '
+          + 'corpora with cross-database testing and domain-adversarial training.',
       },
     ],
   },
   {
     id: 'olikobochon',
-    title: 'Olikobochon, Bengali LLM hallucination detection',
-    stack: 'IUTCS Datathon 2.0, 2026',
+    title: 'Bengali LLM hallucination detection',
+    link: 'https://www.kaggle.com/competitions/bengali-hallucination',
+    stack: 'IUTCS Datathon 2.0',
     tags: ['ml', 'nlp', 'llm', 'evaluation', 'research', 'python', 'ai'],
     bullets: [
       {
         tags: ['nlp', 'llm', 'evaluation', 'research'],
-        text: 'Third on the public leaderboard at 0.922 F1 on the hallucinated class. A decision '
-          + 'ladder resolves most rows deterministically against source corpora and an '
-          + '89k-question bank, sending only the residual to an open-weight judge with Wikipedia '
-          + 'retrieval.',
+        text: 'Third on the leaderboard at 0.922 F1. A decision ladder resolves most rows against '
+          + 'source corpora and a bank of 89,000 questions; only the residual reaches a judge.',
       },
     ],
   },
   {
     id: 'datparkinsons',
-    title: 'DaT Parkinson\'s Challenge, SPECT scan classification',
-    stack: 'DrivenData, 2026',
+    title: 'DaT Parkinson\'s Challenge',
+    link: 'https://ahammadshawki8.github.io/dat-parkinsons-challenge/',
+    stack: 'DrivenData',
     tags: ['ml', 'vision', 'healthcare', 'evaluation', 'research', 'python'],
     bullets: [
       {
         tags: ['ml', 'vision', 'evaluation', 'research'],
-        text: 'Tenth on the private leaderboard at 0.2760 log loss, second highest AUROC in the '
-          + 'top ten at 0.9551. Registers the striatum to a template built from normal scans '
-          + 'with no atlas, then stacks regional binding ratios with 2D and slice-sequence '
-          + 'networks.',
+        text: 'Tenth on the private leaderboard, 0.2760 log loss and 0.9551 AUROC. Striatum found '
+          + 'without an atlas, then binding ratios stacked with 2D and slice-sequence nets.',
+      },
+    ],
+  },
+  {
+    id: 'biasbounty',
+    title: 'Phantom Road Gaps, Bias Bounty',
+    link: 'https://github.com/ahammadshawki8/phantom-road-gaps',
+    stack: 'Humane Intelligence and Zindi',
+    tags: ['ml', 'research', 'evaluation', 'civic', 'python'],
+    bullets: [
+      {
+        tags: ['research', 'evaluation', 'civic'],
+        text: 'Highways double-counted across tract boundaries are 72% of the mean road coverage '
+          + 'gap, and they bend the equity scorecard built to reveal inequity.',
       },
     ],
   },
   {
     id: 'dlsprint',
-    title: 'DL Sprint 4.0, Bangla long-form speech recognition',
-    stack: 'BUET CSE Fest, 2026',
+    title: 'Bangla long-form speech recognition',
+    link: 'https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition',
+    stack: 'DL Sprint 4.0, BUET CSE Fest',
     tags: ['ml', 'speech', 'nlp', 'research', 'python'],
     bullets: [
       {
         tags: ['ml', 'speech', 'nlp'],
-        text: 'Transcription of hours-long Bangla audio with overlapping speakers, background '
-          + 'music and long silences, scored on word error rate weighted by sentence length.',
+        text: 'Hours-long audio with overlapping speakers, background music and long silences, '
+          + 'scored on word error rate weighted by sentence length.',
       },
     ],
   },
@@ -400,35 +359,39 @@ const competitions = [
 // Rendered as one paragraph. The fitter drops from the end.
 const awards = [
   {
-    // The only award carrying an id, so a profile can pin it to the front.
     id: 'robi',
     tags: ['security', 'leadership', 'research'],
-    text: '<strong>Fifth place, Top 10 finalist</strong>, Data Privacy Avengers 2026, Robi '
-      + 'Axiata, with team TheCypherGirls.',
+    text: '<strong>Fifth place, Top 10 finalist</strong>, Data Privacy Avengers 2026, Robi Axiata',
   },
   {
-    tags: ['mobile', 'ml'],
-    text: '<strong>Grand Prize Winner</strong>, FLIR App Challenge 2025 to 2026, for SolarSnap.',
+    id: 'goldenagent',
+    link: 'https://devpost.com/software/shoulder',
+    tags: ['agents', 'llm', 'security'],
+    text: '<strong>Winner, Golden Agent</strong>, Agents for Humans Hackathon 2026, for Shoulder',
   },
   {
-    tags: ['agents', 'llm', 'healthcare'],
-    text: '<strong>Winner, Golden Agent</strong>, Everyday Agents category, Agents for Humans '
-      + 'Hackathon, 2026, for Shoulder.',
+    id: 'flir',
+    link: 'https://www.flir.com/developer/blog/2025-app-challenge-winners/',
+    tags: ['mobile', 'ml', 'vision'],
+    text: '<strong>Grand Prize Winner</strong>, FLIR App Challenge 2025 to 2026, for SolarSnap',
   },
   {
+    id: 'cadenceaward',
+    link: 'https://devpost.com/software/cadence-y6i1cs',
     tags: ['ml', 'speech', 'healthcare'],
-    text: '<strong>Best Overall Project</strong>, ML Empowerment Build Challenge 2.0, 2026, for '
-      + 'CADENCE.',
+    text: '<strong>Best Overall Project</strong>, ML Empowerment Build Challenge 2.0, for CADENCE',
   },
   {
+    id: 'ernie',
+    link: 'https://devpost.com/software/doclyst',
     tags: ['llm', 'ai', 'healthcare'],
-    text: '<strong>Best ERNIE Multimodal Application</strong>, ERNIE AI Developer Challenge by '
-      + 'Baidu, 2026, for Doclyst.',
+    text: '<strong>Best ERNIE Multimodal Application</strong>, Baidu AI Developer Challenge',
   },
   {
+    id: 'coven',
+    link: 'https://github.com/ahammadshawki8/Coven',
     tags: ['fintech', 'llm'],
-    text: '<strong>Honourable Mention</strong>, LMA EDGE Hackathon, 2026, presented at the London '
-      + 'finale, for Coven.',
+    text: '<strong>Honourable Mention</strong>, LMA EDGE Hackathon, London finale, for Coven',
   },
 ];
 

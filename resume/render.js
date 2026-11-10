@@ -46,11 +46,24 @@ const rank = (items, profile) => items
   .sort((a, b) => (b.s - a.s) || (a.i - b.i))
   .map((x) => x.item);
 
+/**
+ * A heading becomes a link when the item has one.
+ *
+ * The PDF keeps anchors clickable, so this is the difference between a reader
+ * taking your word for a number and being one tap from the repository that
+ * produced it. The colour is dark enough to read as text on paper and only
+ * just blue enough to signal there is something behind it.
+ */
+const linked = (text, href) => (href
+  ? `<a class="lnk" href="${href}">${text}</a>`
+  : text);
+
 const renderEntry = (e, profile) => {
   const bullets = rank(e.bullets || [], profile);
+  const head = esc(e.title || `${e.role}, ${e.org}`);
   return `    <div class="entry">
       <div class="row">
-        <span class="left">${esc(e.title || `${e.role}, ${e.org}`)}</span>
+        <span class="left">${linked(head, e.link)}</span>
         <span class="right">${esc(e.stack || e.when)}</span>
       </div>
 ${bullets.length ? `      <ul>
@@ -87,12 +100,21 @@ ${courses.length ? `      <p class="meta">Coursework: ${courses.join(', ')}.</p>
   </section>`;
 };
 
+/**
+ * Awards as a two column bulleted list rather than one running paragraph.
+ *
+ * Six awards in a paragraph is a wall that a reader skims past; as bullets
+ * they are six things, countable at a glance, which is the whole point of
+ * having won them.
+ */
 const renderAwards = (profile, limit) => {
   const items = rank(content.awards, profile).slice(0, limit);
   if (!items.length) return '';
   return `  <section class="awards">
     <h2>Awards</h2>
-    <p class="award-line">${items.map((a) => a.text).join(' ')}</p>
+    <ul class="two-col">
+${items.map((a) => `      <li>${linked(a.text, a.link)}</li>`).join('\n')}
+    </ul>
   </section>`;
 };
 
@@ -163,7 +185,41 @@ const styles = (fontPt, lineHeight) => `  @page {
   .meta { font-size: 9.1pt; margin: 1pt 0 0 0; }
   .skills p { margin: 2pt 0 0 0; }
   .skills .cat { font-weight: 700; }
-  .award-line { margin: 2pt 0 0 0; }`;
+  .award-line { margin: 2pt 0 0 0; }
+
+  /* A link reads as text on paper and as a link on screen. */
+  .lnk { color: #16365c; text-decoration: none; }
+
+  /*
+   * Two columns for the short entries. The browser flows column one then
+   * column two, and the PDF text layer follows the same order, so a parser
+   * reads it the way a person does.
+   */
+  .two-col-entries .entry { break-inside: avoid; }
+  .two-col-entries > .entry,
+  .two-col-entries .entry { margin-bottom: 0.055in; }
+  section.two-col-entries { column-count: 2; column-gap: 0.26in; }
+  section.two-col-entries h2 { column-span: all; }
+  .two-col-entries .row .right { font-size: 0.92em; }
+
+  /*
+   * Padding on a multicol list indents only the first column, so the marker
+   * lives on the item instead and both columns line up.
+   */
+  ul.two-col {
+    column-count: 2;
+    column-gap: 0.26in;
+    margin: 2pt 0 0 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.two-col li {
+    break-inside: avoid;
+    margin-bottom: 0.02in;
+    padding-left: 8pt;
+    text-indent: -8pt;
+  }
+  ul.two-col li::before { content: '•  '; }`;
 
 /**
  * @param {Object} profile   role profile (emphasis, deprioritise, pin, drop)
@@ -193,8 +249,8 @@ const render = (profile = {}, budget = {}) => {
   const sections = [
     renderEducation(profile, nCourses),
     renderSection('Experience', exp, profile),
-    renderSection('Projects', projects, profile),
-    renderSection('Machine Learning Competitions', comps, profile),
+    renderSection('Selected Projects', projects, profile, 'two-col-entries'),
+    renderSection('Machine Learning Competitions', comps, profile, 'two-col-entries'),
     renderAwards(profile, nAwards),
     renderSkills(profile),
   ].filter(Boolean);
@@ -233,9 +289,15 @@ ${sections.join('\n\n')}
  */
 const BUDGETS = [
   {},
-  { coursework: 5, awards: 5 },
-  { projects: 4, competitions: 3 },
-  { projects: 3, competitions: 3 },
+  { projects: 8, competitions: 5 },
+  { projects: 6, competitions: 4 },
+  { projects: 6, competitions: 4, coursework: 4 },
+  { projects: 5, competitions: 4, coursework: 4 },
+  { projects: 5, competitions: 3, coursework: 4 },
+  { projects: 4, competitions: 3, coursework: 4 },
+  {
+    projects: 4, competitions: 3, coursework: 4, awards: 5,
+  },
   { projects: 3, competitions: 3, coursework: 4 },
   { projects: 3, competitions: 2, coursework: 4 },
   {
