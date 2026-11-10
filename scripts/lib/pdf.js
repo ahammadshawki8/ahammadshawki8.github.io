@@ -94,6 +94,16 @@ const buildPdf = async ({ profile = {}, out, quiet = false }) => {
         chosen = {
           budget, pages, bytes: buf.length, contentIn, index: i,
         };
+
+        // Record which budget won, next to the PDF. check-resume needs it:
+        // comparing the PDF against every item in content.js makes everything
+        // the fitter trimmed look like a missing word, and anything trimmed
+        // that happens to contain "ti" or "fi" then reads as font damage.
+        fs.writeFileSync(
+          `${out}.render.json`,
+          `${JSON.stringify({ index: i, budget }, null, 2)}
+`,
+        );
         break;
       }
 

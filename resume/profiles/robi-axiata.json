@@ -1,0 +1,19 @@
+{
+  "slug": "robi-axiata",
+  "company": "Robi Axiata PLC",
+  "role": "General consideration, Data Privacy Avengers 2026 finalist",
+  "note": "Requested by Robi's leadership panel after the Grand Pitch Day, so no job description exists. Tailored toward what that panel already saw rather than a specific posting: privacy and security engineering, voice and Bangla, customer contact governance, and accessibility. Shoulder is pinned because it is the one project that is about privacy as an architecture rather than a policy, which is the thing the contest was judging.",
+  "emphasis": [
+    "security",
+    "speech",
+    "fintech",
+    "accessibility",
+    "evaluation",
+    "agents",
+    "llm"
+  ],
+  "deprioritise": [],
+  "pin": ["shoulder", "robi"],
+  "drop": ["zero", "doclyst", "cassandra", "dejabug"],
+  "why": "Fifth place and a Top 10 finish at Data Privacy Avengers 2026 with team TheCypherGirls. The work that followed it is in the same direction: systems where privacy is enforced by the shape of the data rather than by a promise, voice that works in Bangla over an ordinary phone line, and customer contact that stops when someone says they are in trouble."
+}

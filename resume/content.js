@@ -129,6 +129,38 @@ const projects = [
     ],
   },
   {
+    id: 'momentalk',
+    title: 'Momentalk, photos that speak for people who cannot',
+    stack: 'SAM 3.1, Llama, TypeScript',
+    tags: ['ai', 'llm', 'vision', 'accessibility', 'healthcare', 'typescript'],
+    bullets: [
+      {
+        tags: ['vision', 'accessibility', 'llm'],
+        text: 'A caregiver photographs a real moment and every person and object in it is '
+          + 'outlined and speaks when tapped, so a child who cannot rely on speech points at '
+          + 'their own world and it talks for them. Built in the ten days of the Meta Global AI '
+          + 'Developer Hackathon, segmentation by SAM 3.1.',
+      },
+    ],
+  },
+  {
+    id: 'shoulder',
+    title: 'Shoulder, private agents that share out family care',
+    stack: 'Strands Agents, A2A protocol, Python',
+    tags: ['agents', 'ai', 'llm', 'security', 'accessibility', 'python', 'evaluation'],
+    bullets: [
+      {
+        tags: ['security', 'agents', 'evaluation'],
+        text: 'In three families out of four one adult child becomes the carer, by default. Each '
+          + 'sibling gets an agent holding constraints they would never say aloud, and the agents '
+          + 'negotiate the rota between themselves. A position can leave an agent; the reason '
+          + 'behind it cannot, because the type carrying it has no field for one, a runtime hook '
+          + 'checks every message before it leaves, and a wire log audits what crossed. Fair '
+          + 'division is deterministic: no model touches those numbers.',
+      },
+    ],
+  },
+  {
     id: 'trace',
     title: 'TRACE, camera heart rate with no trained model',
     stack: 'Python, NumPy, classical signal processing',
@@ -140,6 +172,35 @@ const projects = [
           + 'using only convolution and the Fourier transform, switching between three published '
           + 'methods every half second on spectral confidence. 4.62 BPM mean absolute error over '
           + '20 volunteers against 5.63 for the best single method.',
+      },
+    ],
+  },
+  {
+    id: 'someone',
+    title: 'Someone, hands-free CPR guidance on AR glasses',
+    stack: 'Snap SPECS, Lens Studio, CLAD',
+    tags: ['ai', 'vision', 'healthcare', 'accessibility', 'design'],
+    bullets: [
+      {
+        tags: ['vision', 'healthcare', 'design'],
+        text: 'Of trained bystanders who did not help at a cardiac arrest, 37% said they simply '
+          + 'panicked. A target sits on the sternum at real size, a ring pulses at 110 a minute '
+          + 'and turns mint on pace, and a chevron points at one named person rather than saying '
+          + 'send someone. Agent-built through CLAD and checked with LEAF runs.',
+      },
+    ],
+  },
+  {
+    id: 'locus',
+    title: 'Locus, tactile maths graphs for blind students',
+    stack: 'GitLab Duo agents, Node, Cloud Run',
+    tags: ['agents', 'ai', 'accessibility', 'devops', 'cloud', 'javascript'],
+    bullets: [
+      {
+        tags: ['agents', 'accessibility', 'devops'],
+        text: 'A teacher emails a function and agents turn it into a raised-line graph with '
+          + 'braille labels, check it the way a fingertip would, correct their own mistakes, ship '
+          + 'it and order the print. Doing one well by hand in CAD takes about two hours.',
       },
     ],
   },
@@ -263,6 +324,21 @@ const projects = [
 
 const competitions = [
   {
+    id: 'biasbounty',
+    title: 'Phantom Road Gaps, Bias Bounty Mapping Equity',
+    stack: 'Humane Intelligence and Zindi, 2026',
+    tags: ['ml', 'research', 'evaluation', 'civic', 'python'],
+    bullets: [
+      {
+        tags: ['research', 'evaluation', 'civic'],
+        text: 'A highway on a tract boundary is counted in both tracts, and one carrying two '
+          + 'route numbers is counted twice again. Those two rules make up 72% of the mean road '
+          + 'coverage gap and bend the equity scorecard built to reveal inequity: counted once, '
+          + 'the rural to urban ratio moves from 2.34 to 2.73.',
+      },
+    ],
+  },
+  {
     id: 'cadence',
     title: 'CADENCE, voice-based Parkinson\'s screening',
     stack: 'ML Empowerment Build Challenge, 2026',
@@ -323,6 +399,13 @@ const competitions = [
 
 // Rendered as one paragraph. The fitter drops from the end.
 const awards = [
+  {
+    // The only award carrying an id, so a profile can pin it to the front.
+    id: 'robi',
+    tags: ['security', 'leadership', 'research'],
+    text: '<strong>Fifth place, Top 10 finalist</strong>, Data Privacy Avengers 2026, Robi '
+      + 'Axiata, with team TheCypherGirls.',
+  },
   {
     tags: ['mobile', 'ml'],
     text: '<strong>Grand Prize Winner</strong>, FLIR App Challenge 2025 to 2026, for SolarSnap.',

@@ -51,9 +51,25 @@ const main = () => {
   if (!fs.existsSync(PDF)) throw new Error(`No PDF at ${PDF}. Run npm run build:resume first.`);
 
   const profile = JSON.parse(fs.readFileSync(PROFILE, 'utf8'));
-  // Rendered at the widest budget, so this word list is a superset of what the
-  // fitter actually put on the page.
-  const html = render(profile, {});
+
+  /*
+   * Compare against the budget the PDF was actually built at.
+   *
+   * buildPdf records it next to the PDF. Without it the only option is to
+   * render everything and treat the difference as suspicious, which makes
+   * every item the fitter trimmed look missing, and any trimmed word
+   * containing "ti" or "fi" look like font damage. On a tailored resume, where
+   * most of content.js is dropped, that reported hundreds of absent words and
+   * a dozen false ligature failures on a PDF that was perfectly fine.
+   *
+   * With the sidecar, anything absent is genuinely absent from a word that was
+   * put on the page, which is the only thing worth failing on.
+   */
+  const sidecarPath = `${PDF}.render.json`;
+  const sidecar = fs.existsSync(sidecarPath)
+    ? JSON.parse(fs.readFileSync(sidecarPath, 'utf8'))
+    : null;
+  const html = render(profile, sidecar ? sidecar.budget : {});
   const clean = (s) => s
     .replace(/<[^>]+>/g, ' ')
     .replace(/&amp;/g, '&')
@@ -99,13 +115,18 @@ const main = () => {
     else blockWords.forEach((w) => trimmed.add(w));
   });
 
-  const suspect = missing.filter((w) => rendered.has(w) || !trimmed.has(w));
+  // With the sidecar every source word is on the page, so absence is damage.
+  // Without it, fall back to the per entry heuristic.
+  const suspect = sidecar
+    ? missing
+    : missing.filter((w) => rendered.has(w) || !trimmed.has(w));
   const ligatureRisk = suspect.filter((w) => /f[ilft]|ti/.test(w.toLowerCase()));
 
   console.log(`PDF            ${path.relative(process.cwd(), PDF)}`);
   console.log(`Pages          ${pages}`);
   console.log(`Extracted      ${text.length} characters`);
-  console.log(`Source words   ${words.length} unique`);
+  console.log(`Source words   ${words.length} unique`
+    + `${sidecar ? ` (budget ${sidecar.index}, as built)` : ' (every item, no budget recorded)'}`);
   console.log(`Not extracted  ${missing.length}`);
 
   const absentKeywords = KEYWORDS.filter((k) => !lower.includes(k.toLowerCase()));
